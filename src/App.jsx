@@ -1,34 +1,30 @@
-import react from 'react'
+import React from 'react'
+import Navigation from './Components/Navigation'
+import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom'
+import './styles.css'
+import About from './Components/About'
+import Projects from './Components/Projects'
+import Resume from './Components/Resume'
+import Home from './Components/Home'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+export default function App() {
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>  
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router>
+    <div>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/About" element={<About />}/>
+        <Route path="/Projects" element={<Projects />}/>
+        <Route path="/Resume" element={<Resume />}/>
+      </Routes>
+    </div>
+  </Router>
+
   )
 }
 
-export default App

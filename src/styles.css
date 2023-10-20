@@ -1,0 +1,82 @@
+*,*::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background:floralwhite;
+}
+
+.navbar{
+  height: auto;
+  background: rgb(147, 181, 211);
+}
+
+.navbar-expand-md{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.navbar-expand-md{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background: black;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-item{
+  display:inline-flex;
+  justify-content: flex-end;
+}
+
+.navbar-collapse .nav-item{
+  display: block
+}
+
+.navbar-toggler-icon{
+  display: grid;
+  align-items: flex-end;
+}
+
+#nav{
+  justify-content: flex-end;
+}
+
+.navbar-collapse{
+  justify-content: flex-end;
+}
+
+.mainLogo{
+  display: grid;
+  justify-items: center;
+  border-radius: 50%;
+  height: 10rem;
+  padding: 1rem;
+}
+
+.main-body{
+  padding: 1rem;
+}
+
+.resume{
+  height: 100vh;
+  width: 100%;
+}
