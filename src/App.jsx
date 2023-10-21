@@ -7,6 +7,7 @@ import Projects from './Components/Projects'
 import Resume from './Components/Resume'
 import Home from './Components/Home'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Contact from './Components/Contact'
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/About" element={<About />}/>
         <Route path="/Projects" element={<Projects />}/>
         <Route path="/Resume" element={<Resume />}/>
+        <Route path="/Contact" element={<Contact />}/>
       </Routes>
     </div>
   </Router>

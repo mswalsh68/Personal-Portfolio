@@ -35,6 +35,10 @@ export default function Navigation() {
                     <Nav.Link>
                         <Link to='/Resume'>Resume</Link>
                     </Nav.Link>
+
+                    <Nav.Link>
+                        <Link to='/Contact'>Contact</Link>
+                    </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </div>

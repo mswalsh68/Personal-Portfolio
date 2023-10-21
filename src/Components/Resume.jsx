@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles.css'
-import resume from '../assets/Mike_Walsh_2023.pdf'
+import resume from '../assets/Mike_Walsh_Portfolio_2023.pdf'
 
 export default function Resume() {
   
