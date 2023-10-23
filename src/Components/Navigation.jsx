@@ -24,10 +24,6 @@ export default function Navigation() {
 
             <Navbar.Collapse  id="nav">
                 <Nav>
-                      <Nav.Link>
-                        <Link to='/About'>About Me</Link>
-                    </Nav.Link>
-
                     <Nav.Link>
                         <Link to='/Projects'>Projects</ Link>
                     </Nav.Link>

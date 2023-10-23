@@ -19,7 +19,9 @@ export default function Contact() {
 
   return (
 
-    <div>
+    <div className='main-body'>
+
+        <h1>Lets Get In Touch!</h1>
 
         
          <form ref={form} className='form' onSubmit={handleSubmit}>  

@@ -8,23 +8,26 @@ import Resume from './Components/Resume'
 import Home from './Components/Home'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Contact from './Components/Contact'
+import Footer from './Components/Footer'
 
 
 
 export default function App() {
 
   return (
-    <Router>
-    <div>
+    <Router className='main-body'>
+    <div >
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/About" element={<About />}/>
         <Route path="/Projects" element={<Projects />}/>
         <Route path="/Resume" element={<Resume />}/>
         <Route path="/Contact" element={<Contact />}/>
       </Routes>
     </div>
+
+    <Footer />
+
   </Router>
 
   )

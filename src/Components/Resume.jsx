@@ -7,7 +7,9 @@ export default function Resume() {
   return (
     <div className='main-body'>
       <h1>Resume</h1>
-      <iframe className='resume' src={resume} frameborder="0"></iframe>
+      <div className='wrapper'>
+      <iframe className='resume' src={resume}></iframe>
+      </div>
     </div>
   );
 }
