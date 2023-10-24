@@ -191,5 +191,7 @@ body{
 }
 
 .homeImages{
-  height: 30rem;
+  max-height: 30rem;
+  max-width: 95%;
+  object-fit: contain;
 }
