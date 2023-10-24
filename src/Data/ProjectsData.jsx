@@ -2,6 +2,7 @@ import TCF1 from '../assets/TCF1.png'
 import TCF from '../assets/TCF.png'
 import Cheesecakes from '../assets/Cheesecakes.png'
 import Bridgeport from '../assets/bridgeport.png'
+import BB from '../assets/b&b.png'
 
 
 export default[
@@ -32,5 +33,12 @@ export default[
         coverImg:  Bridgeport,
         website: 'https://bridgeporttest.netlify.app/',
         description: 'This is another site that is only HTML, CSS, Bootstrap, and JavaScript. It is for a client and is still not fully completed. ',
+    },
+    {
+        id: 5,
+        title: "Bodhi & Birch",
+        coverImg:  BB,
+        website: 'https://eat-bodhi-and-birch.netlify.app/',
+        description: 'This is another site that is only HTML, CSS, and JavaScript. It is for a friend\'s resuaturant idea and is still not fully completed. ',
     }
 ]
