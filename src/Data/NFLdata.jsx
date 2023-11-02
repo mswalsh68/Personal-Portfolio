@@ -6,7 +6,7 @@ export default function NFLdata() {
   const [game, setGame] = React.useState([]);
   
   React.useEffect(() => {
-    fetch('http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?')
+    fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?')
       .then(response => response.json())
       .then(teamaData => {
 
