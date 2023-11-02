@@ -1,689 +1,83 @@
 import React from 'react';
+import '../styles.css'
 
 export default function NFLdata() {
-  const [data, setData] = React.useState([]);
-
+  
+  const [game, setGame] = React.useState([]);
+  
   React.useEffect(() => {
-    fetch('http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard')
+    fetch('http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?')
       .then(response => response.json())
-      .then(json => setData(json))
+      .then(teamaData => {
+
+        // set game
+        setGame(teamaData.events);
+        console.log(teamaData.events);
+
+      })
       .catch(error => console.error(error));
   }, []);
 
-  console.log(data);
+
+
 
   return (
     <div className='main-body'>
-        <pre>{JSON.stringify(data, null, 2)}</pre>    
+            
+
+              {game.map((games =>{
+                return (
+                      <div className="scoreboard" key={games.competitions[0].competitors[1].team.displayName}>
+                        <div className="date">
+                        </div>
+                        <div className="scores away">
+                          <img src={games.competitions[0].competitors[1].team.logo}/><br />
+                          {games.competitions[0].competitors[1].team.displayName}<br />
+                          {games.competitions[0].competitors[1].score}
+                        </div>
+                        <div className="scores at">
+                          @
+                        </div>
+                        <div className="scores home">
+                          <img src={games.competitions[0].competitors[0].team.logo}/><br />
+                          {games.competitions[0].competitors[0].team.displayName}<br />
+                          {games.competitions[0].competitors[0].score}
+                        </div>
+                      </div>
+                )
+              }))}
+    
     </div>
   );
 
 }
 
 // {
-//     "leagues": [
-//         {
-//             "id": "28",
-//             "uid": "s:20~l:28",
-//             "name": "National Football League",
-//             "abbreviation": "NFL",
-//             "slug": "nfl",
-//             "season": {
-//                 "year": 2023,
-//                 "startDate": "2023-08-01T07:00Z",
-//                 "endDate": "2024-02-15T07:59Z",
-//                 "displayName": "2023",
-//                 "type": {
-//                     "id": "2",
-//                     "type": 2,
-//                     "name": "Regular Season",
-//                     "abbreviation": "reg"
-//                 }
-//             },
-//             "logos": [
-//                 {
-//                     "href": "https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png",
-//                     "width": 500,
-//                     "height": 500,
-//                     "alt": "",
-//                     "rel": [
-//                         "full",
-//                         "default"
-//                     ],
-//                     "lastUpdated": "2018-06-05T12:07Z"
-//                 }
-//             ],
-//             "calendarType": "list",
-//             "calendarIsWhitelist": true,
-//             "calendarStartDate": "2023-08-01T07:00Z",
-//             "calendarEndDate": "2024-02-15T07:59Z",
-//             "calendar": [
-//                 {
-//                     "label": "Preseason",
-//                     "value": "1",
-//                     "startDate": "2023-08-01T07:00Z",
-//                     "endDate": "2023-09-07T06:59Z",
-//                     "entries": [
-//                         {
-//                             "label": "Hall of Fame Weekend",
-//                             "alternateLabel": "HOF",
-//                             "detail": "Aug 1-8",
-//                             "value": "1",
-//                             "startDate": "2023-08-01T07:00Z",
-//                             "endDate": "2023-08-09T06:59Z"
-//                         },
-//                         {
-//                             "label": "Preseason Week 1",
-//                             "alternateLabel": "Pre Wk 1",
-//                             "detail": "Aug 9-15",
-//                             "value": "2",
-//                             "startDate": "2023-08-09T07:00Z",
-//                             "endDate": "2023-08-16T06:59Z"
-//                         },
-//                         {
-//                             "label": "Preseason Week 2",
-//                             "alternateLabel": "Pre Wk 2",
-//                             "detail": "Aug 16-22",
-//                             "value": "3",
-//                             "startDate": "2023-08-16T07:00Z",
-//                             "endDate": "2023-08-23T06:59Z"
-//                         },
-//                         {
-//                             "label": "Preseason Week 3",
-//                             "alternateLabel": "Pre Wk 3",
-//                             "detail": "Aug 23-Sep 6",
-//                             "value": "4",
-//                             "startDate": "2023-08-23T07:00Z",
-//                             "endDate": "2023-09-07T06:59Z"
-//                         }
-//                     ]
-//                 },
-//                 {
-//                     "label": "Regular Season",
-//                     "value": "2",
-//                     "startDate": "2023-09-07T07:00Z",
-//                     "endDate": "2024-01-13T07:59Z",
-//                     "entries": [
-//                         {
-//                             "label": "Week 1",
-//                             "alternateLabel": "Week 1",
-//                             "detail": "Sep 7-12",
-//                             "value": "1",
-//                             "startDate": "2023-09-07T07:00Z",
-//                             "endDate": "2023-09-13T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 2",
-//                             "alternateLabel": "Week 2",
-//                             "detail": "Sep 13-19",
-//                             "value": "2",
-//                             "startDate": "2023-09-13T07:00Z",
-//                             "endDate": "2023-09-20T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 3",
-//                             "alternateLabel": "Week 3",
-//                             "detail": "Sep 20-26",
-//                             "value": "3",
-//                             "startDate": "2023-09-20T07:00Z",
-//                             "endDate": "2023-09-27T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 4",
-//                             "alternateLabel": "Week 4",
-//                             "detail": "Sep 27-Oct 3",
-//                             "value": "4",
-//                             "startDate": "2023-09-27T07:00Z",
-//                             "endDate": "2023-10-04T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 5",
-//                             "alternateLabel": "Week 5",
-//                             "detail": "Oct 4-10",
-//                             "value": "5",
-//                             "startDate": "2023-10-04T07:00Z",
-//                             "endDate": "2023-10-11T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 6",
-//                             "alternateLabel": "Week 6",
-//                             "detail": "Oct 11-17",
-//                             "value": "6",
-//                             "startDate": "2023-10-11T07:00Z",
-//                             "endDate": "2023-10-18T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 7",
-//                             "alternateLabel": "Week 7",
-//                             "detail": "Oct 18-24",
-//                             "value": "7",
-//                             "startDate": "2023-10-18T07:00Z",
-//                             "endDate": "2023-10-25T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 8",
-//                             "alternateLabel": "Week 8",
-//                             "detail": "Oct 25-31",
-//                             "value": "8",
-//                             "startDate": "2023-10-25T07:00Z",
-//                             "endDate": "2023-11-01T06:59Z"
-//                         },
-//                         {
-//                             "label": "Week 9",
-//                             "alternateLabel": "Week 9",
-//                             "detail": "Nov 1-7",
-//                             "value": "9",
-//                             "startDate": "2023-11-01T07:00Z",
-//                             "endDate": "2023-11-08T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 10",
-//                             "alternateLabel": "Week 10",
-//                             "detail": "Nov 8-14",
-//                             "value": "10",
-//                             "startDate": "2023-11-08T08:00Z",
-//                             "endDate": "2023-11-15T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 11",
-//                             "alternateLabel": "Week 11",
-//                             "detail": "Nov 15-21",
-//                             "value": "11",
-//                             "startDate": "2023-11-15T08:00Z",
-//                             "endDate": "2023-11-22T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 12",
-//                             "alternateLabel": "Week 12",
-//                             "detail": "Nov 22-28",
-//                             "value": "12",
-//                             "startDate": "2023-11-22T08:00Z",
-//                             "endDate": "2023-11-29T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 13",
-//                             "alternateLabel": "Week 13",
-//                             "detail": "Nov 29-Dec 5",
-//                             "value": "13",
-//                             "startDate": "2023-11-29T08:00Z",
-//                             "endDate": "2023-12-06T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 14",
-//                             "alternateLabel": "Week 14",
-//                             "detail": "Dec 6-12",
-//                             "value": "14",
-//                             "startDate": "2023-12-06T08:00Z",
-//                             "endDate": "2023-12-13T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 15",
-//                             "alternateLabel": "Week 15",
-//                             "detail": "Dec 13-19",
-//                             "value": "15",
-//                             "startDate": "2023-12-13T08:00Z",
-//                             "endDate": "2023-12-20T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 16",
-//                             "alternateLabel": "Week 16",
-//                             "detail": "Dec 20-26",
-//                             "value": "16",
-//                             "startDate": "2023-12-20T08:00Z",
-//                             "endDate": "2023-12-27T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 17",
-//                             "alternateLabel": "Week 17",
-//                             "detail": "Dec 27-Jan 2",
-//                             "value": "17",
-//                             "startDate": "2023-12-27T08:00Z",
-//                             "endDate": "2024-01-03T07:59Z"
-//                         },
-//                         {
-//                             "label": "Week 18",
-//                             "alternateLabel": "Week 18",
-//                             "detail": "Jan 3-12",
-//                             "value": "18",
-//                             "startDate": "2024-01-03T08:00Z",
-//                             "endDate": "2024-01-13T07:59Z"
-//                         }
-//                     ]
-//                 },
-//                 {
-//                     "label": "Postseason",
-//                     "value": "3",
-//                     "startDate": "2024-01-13T08:00Z",
-//                     "endDate": "2024-02-15T07:59Z",
-//                     "entries": [
-//                         {
-//                             "label": "Wild Card",
-//                             "alternateLabel": "Wild Card",
-//                             "detail": "Jan 13-16",
-//                             "value": "1",
-//                             "startDate": "2024-01-13T08:00Z",
-//                             "endDate": "2024-01-17T07:59Z"
-//                         },
-//                         {
-//                             "label": "Divisional Round",
-//                             "alternateLabel": "Div Rd",
-//                             "detail": "Jan 17-23",
-//                             "value": "2",
-//                             "startDate": "2024-01-17T08:00Z",
-//                             "endDate": "2024-01-24T07:59Z"
-//                         },
-//                         {
-//                             "label": "Conference Championship",
-//                             "alternateLabel": "Conf Champ",
-//                             "detail": "Jan 24-30",
-//                             "value": "3",
-//                             "startDate": "2024-01-24T08:00Z",
-//                             "endDate": "2024-01-31T07:59Z"
-//                         },
-//                         {
-//                             "label": "Pro Bowl",
-//                             "alternateLabel": "Pro Bowl",
-//                             "detail": "Jan 31-Feb 6",
-//                             "value": "4",
-//                             "startDate": "2024-01-31T08:00Z",
-//                             "endDate": "2024-02-07T07:59Z"
-//                         },
-//                         {
-//                             "label": "Super Bowl",
-//                             "alternateLabel": "Super Bowl",
-//                             "detail": "Feb 7-14",
-//                             "value": "5",
-//                             "startDate": "2024-02-07T08:00Z",
-//                             "endDate": "2024-02-15T07:59Z"
-//                         }
-//                     ]
-//                 },
-//                 {
-//                     "label": "Off Season",
-//                     "value": "4",
-//                     "startDate": "2024-02-15T08:00Z",
-//                     "endDate": "2024-08-01T06:59Z",
-//                     "entries": [
-//                         {
-//                             "label": "Week 1",
-//                             "alternateLabel": "Week 1",
-//                             "detail": "Mar 7-Jul 31",
-//                             "value": "1",
-//                             "startDate": "2024-03-07T08:00Z",
-//                             "endDate": "2024-08-01T06:59Z"
-//                         }
-//                     ]
-//                 }
-//             ]
-//         }
-//     ],
-//     "season": {
-//         "type": 2,
-//         "year": 2023
-//     },
-//     "week": {
-//         "number": 7,
-//         "teamsOnBye": [
-//             {
-//                 "id": "4",
-//                 "uid": "s:20~l:28~t:4",
-//                 "location": "Cincinnati",
-//                 "name": "Bengals",
-//                 "abbreviation": "CIN",
-//                 "displayName": "Cincinnati Bengals",
-//                 "shortDisplayName": "Bengals",
-//                 "isActive": true,
-//                 "links": [
-//                     {
-//                         "rel": [
-//                             "clubhouse",
-//                             "desktop",
-//                             "team"
-//                         ],
-//                         "href": "https://www.espn.com/nfl/team/_/name/cin/cincinnati-bengals",
-//                         "text": "Clubhouse",
-//                         "isExternal": false,
-//                         "isPremium": false
-//                     }
-//                 ],
-//                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png"
-//             },
-//             {
-//                 "id": "6",
-//                 "uid": "s:20~l:28~t:6",
-//                 "location": "Dallas",
-//                 "name": "Cowboys",
-//                 "abbreviation": "DAL",
-//                 "displayName": "Dallas Cowboys",
-//                 "shortDisplayName": "Cowboys",
-//                 "isActive": true,
-//                 "links": [
-//                     {
-//                         "rel": [
-//                             "clubhouse",
-//                             "desktop",
-//                             "team"
-//                         ],
-//                         "href": "https://www.espn.com/nfl/team/_/name/dal/dallas-cowboys",
-//                         "text": "Clubhouse",
-//                         "isExternal": false,
-//                         "isPremium": false
-//                     }
-//                 ],
-//                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/dal.png"
-//             },
-//             {
-//                 "id": "10",
-//                 "uid": "s:20~l:28~t:10",
-//                 "location": "Tennessee",
-//                 "name": "Titans",
-//                 "abbreviation": "TEN",
-//                 "displayName": "Tennessee Titans",
-//                 "shortDisplayName": "Titans",
-//                 "isActive": true,
-//                 "links": [
-//                     {
-//                         "rel": [
-//                             "clubhouse",
-//                             "desktop",
-//                             "team"
-//                         ],
-//                         "href": "https://www.espn.com/nfl/team/_/name/ten/tennessee-titans",
-//                         "text": "Clubhouse",
-//                         "isExternal": false,
-//                         "isPremium": false
-//                     }
-//                 ],
-//                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png"
-//             },
-//             {
-//                 "id": "20",
-//                 "uid": "s:20~l:28~t:20",
-//                 "location": "New York",
-//                 "name": "Jets",
-//                 "abbreviation": "NYJ",
-//                 "displayName": "New York Jets",
-//                 "shortDisplayName": "Jets",
-//                 "isActive": true,
-//                 "links": [
-//                     {
-//                         "rel": [
-//                             "clubhouse",
-//                             "desktop",
-//                             "team"
-//                         ],
-//                         "href": "https://www.espn.com/nfl/team/_/name/nyj/new-york-jets",
-//                         "text": "Clubhouse",
-//                         "isExternal": false,
-//                         "isPremium": false
-//                     }
-//                 ],
-//                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/nyj.png"
-//             },
-//             {
-//                 "id": "29",
-//                 "uid": "s:20~l:28~t:29",
-//                 "location": "Carolina",
-//                 "name": "Panthers",
-//                 "abbreviation": "CAR",
-//                 "displayName": "Carolina Panthers",
-//                 "shortDisplayName": "Panthers",
-//                 "isActive": true,
-//                 "links": [
-//                     {
-//                         "rel": [
-//                             "clubhouse",
-//                             "desktop",
-//                             "team"
-//                         ],
-//                         "href": "https://www.espn.com/nfl/team/_/name/car/carolina-panthers",
-//                         "text": "Clubhouse",
-//                         "isExternal": false,
-//                         "isPremium": false
-//                     }
-//                 ],
-//                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png"
-//             },
-//             {
-//                 "id": "34",
-//                 "uid": "s:20~l:28~t:34",
-//                 "location": "Houston",
-//                 "name": "Texans",
-//                 "abbreviation": "HOU",
-//                 "displayName": "Houston Texans",
-//                 "shortDisplayName": "Texans",
-//                 "isActive": true,
-//                 "links": [
-//                     {
-//                         "rel": [
-//                             "clubhouse",
-//                             "desktop",
-//                             "team"
-//                         ],
-//                         "href": "https://www.espn.com/nfl/team/_/name/hou/houston-texans",
-//                         "text": "Clubhouse",
-//                         "isExternal": false,
-//                         "isPremium": false
-//                     }
-//                 ],
-//                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png"
-//             }
-//         ]
-//     },
+//     
 //     "events": [
 //         {
-//             "id": "401547483",
-//             "uid": "s:20~l:28~e:401547483",
-//             "date": "2023-10-20T00:15Z",
 //             "name": "Jacksonville Jaguars at New Orleans Saints",
-//             "shortName": "JAX @ NO",
-//             "season": {
-//                 "year": 2023,
-//                 "type": 2,
-//                 "slug": "regular-season"
-//             },
-//             "week": {
-//                 "number": 7
+//           
 //             },
 //             "competitions": [
 //                 {
-//                     "id": "401547483",
-//                     "uid": "s:20~l:28~e:401547483~c:401547483",
-//                     "date": "2023-10-20T00:15Z",
-//                     "attendance": 70009,
-//                     "type": {
-//                         "id": "1",
-//                         "abbreviation": "STD"
-//                     },
-//                     "timeValid": true,
-//                     "neutralSite": false,
-//                     "conferenceCompetition": false,
-//                     "playByPlayAvailable": true,
-//                     "recent": false,
-//                     "venue": {
-//                         "id": "3493",
-//                         "fullName": "Caesars Superdome",
-//                         "address": {
-//                             "city": "New Orleans",
-//                             "state": "LA"
-//                         },
-//                         "capacity": 73000,
-//                         "indoor": true
 //                     },
 //                     "competitors": [
 //                         {
-//                             "id": "18",
-//                             "uid": "s:20~l:28~t:18",
-//                             "type": "team",
-//                             "order": 0,
+//                            
 //                             "homeAway": "home",
-//                             "winner": false,
 //                             "team": {
-//                                 "id": "18",
-//                                 "uid": "s:20~l:28~t:18",
-//                                 "location": "New Orleans",
-//                                 "name": "Saints",
-//                                 "abbreviation": "NO",
 //                                 "displayName": "New Orleans Saints",
-//                                 "shortDisplayName": "Saints",
-//                                 "color": "d3bc8d",
-//                                 "alternateColor": "000000",
-//                                 "isActive": true,
-//                                 "venue": {
-//                                     "id": "3493"
 //                                 },
-//                                 "links": [
-//                                     {
-//                                         "rel": [
-//                                             "clubhouse",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "https://www.espn.com/nfl/team/_/name/no/new-orleans-saints",
-//                                         "text": "Clubhouse",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     },
-//                                     {
-//                                         "rel": [
-//                                             "roster",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "http://www.espn.com/nfl/team/roster/_/name/no/new-orleans-saints",
-//                                         "text": "Roster",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     },
-//                                     {
-//                                         "rel": [
-//                                             "stats",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "http://www.espn.com/nfl/team/stats/_/name/no/new-orleans-saints",
-//                                         "text": "Statistics",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     },
-//                                     {
-//                                         "rel": [
-//                                             "schedule",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "https://www.espn.com/nfl/team/schedule/_/name/no",
-//                                         "text": "Schedule",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     }
-//                                 ],
+//                                 
 //                                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/no.png"
 //                             },
 //                             "score": "24",
-//                             "linescores": [
-//                                 {
-//                                     "value": 3
-//                                 },
-//                                 {
-//                                     "value": 3
-//                                 },
-//                                 {
-//                                     "value": 3
-//                                 },
-//                                 {
-//                                     "value": 15
-//                                 }
-//                             ],
-//                             "statistics": [],
-//                             "records": [
-//                                 {
-//                                     "name": "overall",
-//                                     "abbreviation": "Game",
-//                                     "type": "total",
-//                                     "summary": "3-4"
-//                                 },
-//                                 {
-//                                     "name": "Home",
-//                                     "type": "home",
-//                                     "summary": "1-2"
-//                                 },
-//                                 {
-//                                     "name": "Road",
-//                                     "type": "road",
-//                                     "summary": "2-2"
-//                                 }
-//                             ]
-//                         },
+//                             
 //                         {
-//                             "id": "30",
-//                             "uid": "s:20~l:28~t:30",
-//                             "type": "team",
-//                             "order": 1,
+//                             
 //                             "homeAway": "away",
-//                             "winner": true,
-//                             "team": {
-//                                 "id": "30",
-//                                 "uid": "s:20~l:28~t:30",
-//                                 "location": "Jacksonville",
-//                                 "name": "Jaguars",
-//                                 "abbreviation": "JAX",
 //                                 "displayName": "Jacksonville Jaguars",
-//                                 "shortDisplayName": "Jaguars",
-//                                 "color": "007487",
-//                                 "alternateColor": "d7a22a",
-//                                 "isActive": true,
-//                                 "venue": {
-//                                     "id": "3712"
-//                                 },
-//                                 "links": [
-//                                     {
-//                                         "rel": [
-//                                             "clubhouse",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "https://www.espn.com/nfl/team/_/name/jax/jacksonville-jaguars",
-//                                         "text": "Clubhouse",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     },
-//                                     {
-//                                         "rel": [
-//                                             "roster",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "http://www.espn.com/nfl/team/roster/_/name/jax/jacksonville-jaguars",
-//                                         "text": "Roster",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     },
-//                                     {
-//                                         "rel": [
-//                                             "stats",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "http://www.espn.com/nfl/team/stats/_/name/jax/jacksonville-jaguars",
-//                                         "text": "Statistics",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     },
-//                                     {
-//                                         "rel": [
-//                                             "schedule",
-//                                             "desktop",
-//                                             "team"
-//                                         ],
-//                                         "href": "https://www.espn.com/nfl/team/schedule/_/name/jax",
-//                                         "text": "Schedule",
-//                                         "isExternal": false,
-//                                         "isPremium": false
-//                                     }
-//                                 ],
-//                                 "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png"
-//                             },
 //                             "score": "31",
 //                             "linescores": [
 //                                 {

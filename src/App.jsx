@@ -9,6 +9,7 @@ import Home from './Components/Home'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Contact from './Components/Contact'
 import Footer from './Components/Footer'
+import NFL from './Components/NFL'
 
 
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/Projects" element={<Projects />}/>
         <Route path="/Resume" element={<Resume />}/>
         <Route path="/Contact" element={<Contact />}/>
+        <Route path="/NFL" element={<NFL />}/>
       </Routes>
     </div>
 

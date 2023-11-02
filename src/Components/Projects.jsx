@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles.css'
-import Card from './DataTemplate'
+import Card from './Card'
 import ProjectsData from '../Data/ProjectsData'
 
 

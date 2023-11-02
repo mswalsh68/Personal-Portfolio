@@ -195,3 +195,37 @@ body{
   max-width: 95%;
   object-fit: contain;
 }
+
+.scoreboard{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.game{
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.scores{
+  font-size: x-large;
+  text-align: center;
+}
+.scores > img{
+  height: 8rem;
+}
+
+.away{
+  grid-column: 1/2;
+}
+
+.at{
+  grid-column: 2/3;
+}
+
+.home{
+  grid-column: 3/4;
+}
+
