@@ -9,7 +9,6 @@ export default function NFLdata() {
     fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?')
       .then(response => response.json())
       .then(teamaData => {
-
         // set game
         setGame(teamaData.events);
         console.log(teamaData.events);
@@ -17,9 +16,6 @@ export default function NFLdata() {
       })
       .catch(error => console.error(error));
   }, []);
-
-
-
 
   return (
     <div className='main-body'>
