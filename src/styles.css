@@ -190,11 +190,6 @@ body{
   text-align: center;
 }
 
-.homeImages{
-  max-height: 30rem;
-  max-width: 95%;
-  object-fit: contain;
-}
 
 .scoreboard{
   display: grid;
@@ -202,11 +197,6 @@ body{
   place-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.game{
-  font-size: x-large;
-  font-weight: bolder;
 }
 
 .scores{
@@ -230,36 +220,17 @@ body{
   grid-column: 3/4;
 }
 
-@media screen and (max-width: 500px) {
-  .homeImages{
-    max-height: 10rem;
-    max-width: 95%;
-    object-fit: contain;
-  }
-
-  .game{
-    font-size: large;
-    font-weight: bolder;
-  }
+@media screen and (max-width: 400px) {
   
   .scores{
     font-size: large;
-    text-align: center;
   }
   .scores > img{
-    height: 8rem;
-  }
-  
-  .away{
-    grid-column: 1/2;
+    height: 5rem;
   }
   
   .at{
-    grid-column: 2/3;
-    font-size: medium;
+    font-size: small;
   }
   
-  .home{
-    grid-column: 3/4;
-  }
 }
