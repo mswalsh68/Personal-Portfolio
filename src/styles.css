@@ -190,6 +190,11 @@ body{
   text-align: center;
 }
 
+.homeImages{
+  max-height: 30rem;
+  max-width: 95%;
+  object-fit: contain;
+}
 
 .scoreboard{
   display: grid;
@@ -197,6 +202,11 @@ body{
   place-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.game{
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 .scores{
