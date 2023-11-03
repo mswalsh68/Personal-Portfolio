@@ -223,6 +223,7 @@ body{
 
 .at{
   grid-column: 2/3;
+  font-size: large;
 }
 
 .home{

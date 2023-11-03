@@ -25,20 +25,19 @@ export default function NFLdata() {
               {game.map((games =>{
                 return (
                       <div className="scoreboard" key={games.competitions[0].competitors[1].team.displayName}>
-                        <div className="date">
-                        </div>
+                        
                         <div className="scores away">
                           <img src={games.competitions[0].competitors[1].team.logo}/><br />
                           {games.competitions[0].competitors[1].team.displayName}<br />
                           {games.competitions[0].competitors[1].score}
                         </div>
+
                         <div className="scores at">
                           {games.competitions[0].venue.fullName} <br />
                           {games.competitions[0].venue.address.city}, {games.competitions[0].venue.address.state} <br />
                           TV : {games.competitions[0].broadcasts[0].names[0]}
-
-
                         </div>
+                        
                         <div className="scores home">
                           <img src={games.competitions[0].competitors[0].team.logo}/><br />
                           {games.competitions[0].competitors[0].team.displayName}<br />
