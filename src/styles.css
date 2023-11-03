@@ -220,7 +220,7 @@ body{
   grid-column: 3/4;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   
   .scores{
     font-size: large;
