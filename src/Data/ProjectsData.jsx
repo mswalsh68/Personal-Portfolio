@@ -11,7 +11,7 @@ export default[
         title: "The Connectivity Firm",
         coverImg:  TCF1,
         website: 'https://theconnectivityfirm.com/',
-        description: "TCF is my father's company. This is the live site up right now. It was created with with HTML, CSS, Bootstrap, and JavaScript",
+        description: "TCF is my father's company. This is the live site up right now. It was created with HTML, CSS, Bootstrap, and JavaScript",
     },
     {
         id: 2,
