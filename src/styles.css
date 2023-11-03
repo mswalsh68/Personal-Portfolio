@@ -230,3 +230,36 @@ body{
   grid-column: 3/4;
 }
 
+@media screen and (max-width: 500px) {
+  .homeImages{
+    max-height: 10rem;
+    max-width: 95%;
+    object-fit: contain;
+  }
+
+  .game{
+    font-size: large;
+    font-weight: bolder;
+  }
+  
+  .scores{
+    font-size: large;
+    text-align: center;
+  }
+  .scores > img{
+    height: 8rem;
+  }
+  
+  .away{
+    grid-column: 1/2;
+  }
+  
+  .at{
+    grid-column: 2/3;
+    font-size: medium;
+  }
+  
+  .home{
+    grid-column: 3/4;
+  }
+}
