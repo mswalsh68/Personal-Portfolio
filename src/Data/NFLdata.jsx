@@ -26,6 +26,11 @@ export default function NFLdata() {
                 return (
                       <div className="scoreboard" key={games.competitions[0].competitors[1].team.displayName}>
                         
+                        <p className='at'>
+                          {games.status.type.detail} <br />
+                          {games.status.displayClock} 
+                        </p>
+
                         <div className="scores away">
                           <img src={games.competitions[0].competitors[1].team.logo}/><br />
                           {games.competitions[0].competitors[1].team.displayName}<br />
