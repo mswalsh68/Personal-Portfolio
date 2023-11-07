@@ -225,6 +225,7 @@ body{
 .at{
   grid-column: 2/3;
   font-size: large;
+  text-align: center;
 }
 
 .home{

@@ -28,6 +28,7 @@ export default function NFLdata() {
                         
                         <p className='at'>
                           {games.status.type.detail} <br />
+                          QTR : {games.status.period}
                           {games.status.displayClock} 
                         </p>
 
