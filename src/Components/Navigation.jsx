@@ -37,7 +37,7 @@ export default function Navigation() {
                     </Nav.Link>
 
                     <Nav.Link>
-                        <Link to='/NFL'>NFL</Link>
+                        <Link to='/NFL'>NFL Scoreboard</Link>
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
