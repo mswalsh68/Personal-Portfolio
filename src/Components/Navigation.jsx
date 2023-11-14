@@ -39,12 +39,6 @@ export default function Navigation() {
                     <Nav.Link>
                         <Link to='/NFL'>NFL Scoreboard</Link>
                     </Nav.Link>
-
-                    <Nav.Link>
-                        <Link to='/NCAA'>NCAA Scoreboard</Link>
-                    </Nav.Link>
-
-                    
                 </Nav>
             </Navbar.Collapse>
             </div>
