@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Contact from './Components/Contact'
 import Footer from './Components/Footer'
 import NFL from './Components/NFL'
+import NCAA from './Components/NCAA'
 
 
 
@@ -24,6 +25,9 @@ export default function App() {
         <Route path="/Resume" element={<Resume />}/>
         <Route path="/Contact" element={<Contact />}/>
         <Route path="/NFL" element={<NFL />}/>
+        <Route path="/NCAA" element={<NCAA />}/>
+
+
       </Routes>
     </div>
 

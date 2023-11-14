@@ -1,5 +1,7 @@
 import React from 'react';
 import NFLdata from '../Data/NFLdata';
+import '../styles.css';
+
 
 export default function NFL() {
 
