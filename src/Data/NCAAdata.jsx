@@ -49,7 +49,7 @@ export default function NCAAdata() {
                         
                         <div className="scores home">
                           <img src={games.competitions[0].competitors[0].team.logo}/><br />
-                          {games.competitions[0].competitors[1].curatedRank.current < '26' &&  games.competitions[0].competitors[1].curatedRank.current} {games.competitions[0].competitors[0].team.displayName}<br />
+                          {games.competitions[0].competitors[0].curatedRank.current < '26' &&  games.competitions[0].competitors[1].curatedRank.current} {games.competitions[0].competitors[0].team.displayName}<br />
                           {games.competitions[0].competitors[0].score}
                           
                         </div>
