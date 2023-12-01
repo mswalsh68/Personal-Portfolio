@@ -37,9 +37,9 @@ export default function Contact() {
                     name="email"
                 />
                 <input className='inputs'
-                    type="text"
-                    placeholder="Company"
-                    name="company"
+                    type="number"
+                    placeholder="Phone Number"
+                    name="phone"
                 />
              </div>
              <div className='inputs2'>
