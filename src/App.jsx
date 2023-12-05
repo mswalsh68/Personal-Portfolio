@@ -2,14 +2,15 @@ import React from 'react'
 import Navigation from './Components/Navigation'
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom'
 import './styles.css'
-import Projects from './Components/Projects'
-import Resume from './Components/Resume'
-import Home from './Components/Home'
+import Projects from './Pages/Projects'
+import Resume from './Pages/Resume'
+import Home from './Pages/Home'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Contact from './Components/Contact'
+import Contact from './Pages/Contact'
 import Footer from './Components/Footer'
-import NFL from './Components/NFL'
-import NCAA from './Components/NCAA'
+import NFL from './Pages/NFL'
+import NCAA from './Pages/NCAA'
+import ThankYou from './Pages/ThankYou'
 
 
 
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/Contact" element={<Contact />}/>
         <Route path="/NFL" element={<NFL />}/>
         <Route path="/NCAA" element={<NCAA />}/>
+        <Route path="/ThankYou" element={<ThankYou />}/>
       </Routes>
     </div>
 

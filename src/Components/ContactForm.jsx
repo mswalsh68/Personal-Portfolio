@@ -1,12 +1,17 @@
 import React, {useRef} from 'react'
 import '../styles.css'
+import {useNavigate} from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 
 export default function Contact() {
 
     const form = useRef();
+    const navigate = useNavigate();
+
 
     function handleSubmit(e){
+        navigate('/ThankYou')
+
         e.preventDefault();
  
     emailjs.sendForm('service_s8b4vep', 'template_e2fglfg', form.current, '-5EntjEEuC2PrJWO4')
@@ -18,10 +23,6 @@ export default function Contact() {
     }
 
   return (
-
-    <div className='main-body'>
-
-        <h1>Lets Get In Touch!</h1>
 
         
          <form ref={form} className='form' onSubmit={handleSubmit}>  
@@ -56,7 +57,5 @@ export default function Contact() {
             </button>       
         </form>
 
-        
-    </div>   
     )
 }
