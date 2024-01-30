@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles.css'
-import resume from '../assets/Mike Walsh 2024.pdf'
+// import resume from '../assets/Mike Walsh 2024.pdf'
 
 export default function Resume() {
 
