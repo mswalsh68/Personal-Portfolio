@@ -1,4 +1,3 @@
-import React from 'react'
 import Navigation from './Components/Navigation'
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom'
 import './styles.css'
@@ -11,7 +10,8 @@ import Footer from './Components/Footer'
 import NFL from './Pages/NFL'
 import NCAA from './Pages/NCAA'
 import ThankYou from './Pages/ThankYou'
-
+// import Weather from './Pages/Weather'
+// import BlackJack from './Pages/BlackJack'
 
 
 export default function App() {
@@ -28,6 +28,8 @@ export default function App() {
         <Route path="/NFL" element={<NFL />}/>
         <Route path="/NCAA" element={<NCAA />}/>
         <Route path="/ThankYou" element={<ThankYou />}/>
+        {/* <Route path="/Weather" element={<Weather />}/> */}
+        {/* <Route path="/BlackJack" element={<BlackJack />}/> */}
       </Routes>
     </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import NFLdata from '../Data/NFLdata';
+import WeatherData from '../Data/WeatherData';
 
-export default function NFL() {
+export default function Weather() {
 
 
 
@@ -9,7 +9,7 @@ export default function NFL() {
     <div className='main-body'>
         <h2>NFL Scoreboard</h2>
 
-    <NFLdata />
+    <WeatherData />
 
     
     </div>

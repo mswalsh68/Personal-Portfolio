@@ -14,7 +14,7 @@ export default function NCAAdata() {
         setGame(teamaData.events);
         console.log(teamaData.events);
 
-
+ 
       })
       .catch(error => console.error(error));
   }, []);

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles.css'
+import { Link } from 'react-router-dom';
 
 export default function NFLdata() {
   
@@ -21,13 +22,15 @@ export default function NFLdata() {
   return (
     <div className='main-body'>
             
-
+            
               {game.map((games =>{
+              
                 return (
-                      <div className="scoreboard" key={games.competitions[0].competitors[1].team.displayName}>
+                  <div className="scoreboard" key={games.shortName}>
                         
                         <p className='at'>
                           {games.status.type.detail} <br />
+                       <Link to={games.shortName}>Stats</Link> 
                           
                         </p>
 
@@ -51,7 +54,6 @@ export default function NFLdata() {
                       </div>
                 )
               }))}
-    
     </div>
   );
 
