@@ -1,6 +1,5 @@
-import React from 'react'
 import '../styles.css'
-import resume from '../assets/Mike Walsh 2024.pdf'
+import Resume from '../assets/Mike Walsh 2024.pdf'
 
 export default function Resume() {
 
@@ -10,7 +9,7 @@ export default function Resume() {
     <div className='main-body'>
       <h1>Resume</h1>
       <div className='wrapper'>
-      <iframe className='resume' src={resume}></iframe>
+      <iframe className='resume' src={Resume}></iframe>
       </div>
     </div>
   );
