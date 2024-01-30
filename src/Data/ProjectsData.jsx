@@ -17,7 +17,7 @@ export default[
     },
     {
         id: 2,
-        title: "Dog Shopping Cary",
+        title: "Dog Shopping Cart",
         coverImg:  DSC,
         website: 'https://dogshoppingcart.netlify.app/',
         description: 'This is a shopping cart app. It is made with vanilla JavaScript, and has a live database powered with Firebase',
