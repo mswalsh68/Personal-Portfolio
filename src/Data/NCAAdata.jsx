@@ -1,9 +1,12 @@
 import React from 'react';
 import '../styles.css'
+import NCAAlogo from '../assets/NCAA_logo.svg.png'
 
 export default function NCAAdata() {
   
   const [game, setGame] = React.useState([]);
+  const [week, setWeek] = React.useState([]);
+
   
   React.useEffect(() => {
     fetch('https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard')
@@ -14,6 +17,9 @@ export default function NCAAdata() {
         setGame(teamaData.events);
         console.log(teamaData.events);
 
+        // set week
+        setWeek(teamaData.leagues);
+        console.log(teamaData.leagues);
  
       })
       .catch(error => console.error(error));
@@ -22,16 +28,27 @@ export default function NCAAdata() {
   return (
     <div className='main-body'>
             
+            {week.map((weeks =>{
+              return(
+                <>
+
+                <h1><img src={NCAAlogo} height="200px"/> {weeks.season.type.name}</h1>
+                
+                </>
+              )
+            }))}
+
+
+
 
               {game.map((games =>{
       
-                
-
                 return (
                       <div className="scoreboard" key={games.competitions[0].competitors[1].team.displayName}>
                         
                         <p className='at'>
-                          {games.status.type.detail} <br />
+                        <b>{games.competitions[0].notes[0].headline}</b> <br />
+                          {games.status.type.detail}
                           
                         </p>
 

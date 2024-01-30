@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles.css'
-import { Link } from 'react-router-dom';
 
 export default function NFLdata() {
   
   const [game, setGame] = React.useState([]);
+  const [week, setWeek] = React.useState([]);
   
   React.useEffect(() => {
     fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?')
@@ -13,24 +13,47 @@ export default function NFLdata() {
 
         // set game
         setGame(teamaData.events);
-        console.log(teamaData.events);
+        console.log(teamaData);
+
+        // set week
+        setWeek(teamaData.leagues);
+        console.log(teamaData.leagues);
 
       })
       .catch(error => console.error(error));
   }, []);
 
+
+
+
+
+
+
   return (
     <div className='main-body'>
+
+            {week.map((weeks =>{
+              return(
+                <>
+
+                <h1><img src={weeks.logos[0].href} height="200px"/> {weeks.season.type.name}</h1>
+                
+                </>
+              )
+            }))}
+
+
             
-            
+           
               {game.map((games =>{
               
                 return (
+                  
                   <div className="scoreboard" key={games.shortName}>
-                        
+                    
                         <p className='at'>
-                          {games.status.type.detail} <br />
-                       <Link to={games.shortName}>Stats</Link> 
+                          <b>{games.competitions[0].notes[0].headline}</b> <br />
+                          {games.status.type.detail} 
                           
                         </p>
 

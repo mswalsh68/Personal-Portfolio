@@ -6,13 +6,13 @@ export default function Weather() {
 
 
   return (
-    <div className='main-body'>
-        <h2>NFL Scoreboard</h2>
+    <>
+    
 
     <WeatherData />
 
     
-    </div>
+    </>
   );
 
 }

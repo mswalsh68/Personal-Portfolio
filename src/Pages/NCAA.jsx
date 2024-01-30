@@ -7,12 +7,9 @@ export default function NCAA() {
 
 
   return (
-    <div className='main-body'>
-<h2>NCAA Top 25 Scoreboard</h2>
+    
+      <NCAAdata />
 
-<NCAAdata />
-</div>
   );
-
 }   
 
