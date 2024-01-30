@@ -29,6 +29,14 @@ export default function Navigation() {
                     </Nav.Link>
 
                     <Nav.Link>
+                        <Link to='/NFL'>NFL Scoreboard</Link>
+                    </Nav.Link>
+
+                    <Nav.Link>
+                        <Link to='/NCAA'>NCAA Scoreboard</Link>
+                    </Nav.Link>
+
+                    <Nav.Link>
                         <Link to='/Resume'>Resume</Link>
                     </Nav.Link>
 
@@ -36,13 +44,6 @@ export default function Navigation() {
                         <Link to='/Contact'>Contact</Link>
                     </Nav.Link>
 
-                    <Nav.Link>
-                        <Link to='/NFL'>NFL Scoreboard</Link>
-                    </Nav.Link>
-
-                    <Nav.Link>
-                        <Link to='/NCAA'>NCAA Scoreboard</Link>
-                    </Nav.Link>
 
                     {/* <Nav.Link>
                         <Link to='/Weather'>Weather</Link>
