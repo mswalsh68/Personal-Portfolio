@@ -48,13 +48,13 @@ export default[
         title: "Bridgeport Screening Services",
         coverImg:  Bridgeport,
         website: 'https://bridgeporttest.netlify.app/',
-        description: 'This is another site that is only HTML, CSS, Bootstrap, and JavaScript. It is for a client and is still not fully completed. ',
+        description: 'This is another site that is only HTML, CSS, Bootstrap, and JavaScript. It is for a client and is not ready to be launched. ',
     },
     {
         id: 7,
         title: "Bodhi & Birch",
         coverImg:  BB,
         website: 'https://eat-bodhi-and-birch.netlify.app/',
-        description: 'This is another site that is only HTML, CSS, and JavaScript. It is for a friend\'s restaurant idea and is still not fully completed. ',
+        description: 'This is another site that is only HTML, CSS, and JavaScript. It is for a friend\'s restaurant idea and is not ready to be launched. ',
     }
 ]
