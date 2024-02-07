@@ -27,7 +27,7 @@ export default[
         title: "Chrome Extension",
         coverImg:  ChromeExt,
         website: null,
-        description: 'This is a Chrome browser extension used like a favorites bar. It is made with vanilla JavaScript. I can save tabs as well as input my own links to save.',
+        description: 'This is a Chrome browser extension used like a favorites bar. It is made with vanilla JavaScript. I can save tabs as well as input my own links to save. Currently, this is only a local extension.',
     },
     {
         id: 4,
