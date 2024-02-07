@@ -27,14 +27,14 @@ export default[
         title: "Chrome Extension",
         coverImg:  ChromeExt,
         website: null,
-        description: 'This is a Chrome browser extension used like a favorites bar. It is made with vanilla JavaScript. I can save tabs as well as input my own links to save. Currently, this is only a local extension.',
+        description: 'This is a Chrome browser extension used like a favorites bar. It is made with vanilla JavaScript. I can save tabs as well as input my own links to save. Currently, this is only a local extension',
     },
     {
         id: 4,
         title: "The Connectivity Firm",
         coverImg:  TCF,
         website: 'https://tcf-react-project.netlify.app/',
-        description: 'This is a test site of the TCF site, created with React.',
+        description: 'This is a test site of the TCF site, created with React',
     },
     {
         id: 5,
@@ -48,13 +48,13 @@ export default[
         title: "Bridgeport Screening Services",
         coverImg:  Bridgeport,
         website: 'https://bridgeporttest.netlify.app/',
-        description: 'This is another site that is only HTML, CSS, Bootstrap, and JavaScript. It is for a client and is not ready to be launched. ',
+        description: 'This is another site that is only HTML, CSS, Bootstrap, and JavaScript. It is for a client and is not ready to be launched',
     },
     {
         id: 7,
         title: "Bodhi & Birch",
         coverImg:  BB,
         website: 'https://eat-bodhi-and-birch.netlify.app/',
-        description: 'This is another site that is only HTML, CSS, and JavaScript. It is for a friend\'s restaurant idea and is not ready to be launched. ',
+        description: 'This is another site that is only HTML, CSS, and JavaScript. It is for a friend\'s restaurant idea and is not ready to be launched',
     }
 ]
