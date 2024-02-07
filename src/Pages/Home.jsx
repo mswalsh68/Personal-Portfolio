@@ -19,7 +19,7 @@ export default function Home() {
         There are links to projects I've worked on, my resume, and a contact form to reach out to me.
       </p>
       <p>
-        This page will constantly be updated with new things I've done a long the way. 
+        This page will constantly be updated with new things I've done along the way. 
       </p>
       <p>
         Like what you see? Feel free to head over to the <Link to='/Contact'>Contact</Link> page and reach out to me.
