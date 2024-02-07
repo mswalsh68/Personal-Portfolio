@@ -2,7 +2,6 @@ import Me from '../assets/me.jpg'
 import '../styles.css'
 import { Link } from 'react-router-dom'
 import { Nav, Navbar } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 

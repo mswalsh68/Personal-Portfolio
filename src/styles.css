@@ -24,17 +24,6 @@ body{
   font-weight:bold;
 }
 
-.navbar-expand-md{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navbar a {
-  color: black;
-  text-decoration: none;
-  font-weight:bold;
-}
-
 .navbar a:hover,
 .navbar a:focus {
   background: black;
@@ -48,7 +37,8 @@ body{
 }
 
 .navbar-collapse .nav-item{
-  display: block
+  display: block;
+  gap: 1rem;
 }
 
 .navbar-toggler-icon{
@@ -230,49 +220,6 @@ body{
 
 .home{
   grid-column: 3/4;
-}
-
-.blackjack{
-  display: grid;
-  justify-content: center;
-  min-height: 100vh;
-  background-image: url('./assets/istockphoto-1218355494-612x612.jpg');
-  background-position: center;
-  background-size: cover;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-}
-.hidden {
-  display: none;
-}
-.show {
- display: grid;
-}
-
-.bj {
-  color: goldenrod;
-  font-weight: bolder;
-}
-
-#message-el {
-  font-style: italic;
-}
-
-button {
-  color: #016f32;
-  width: 10rem;
-  height: 5rem;
-  background: goldenrod;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 2px;
-  display: grid;
-  justify-self: center;
-  place-items: center;
 }
 
 
