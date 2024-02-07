@@ -55,6 +55,6 @@ export default[
         title: "Bodhi & Birch",
         coverImg:  BB,
         website: 'https://eat-bodhi-and-birch.netlify.app/',
-        description: 'This is another site that is only HTML, CSS, and JavaScript. It is for a friend\'s resuaturant idea and is still not fully completed. ',
+        description: 'This is another site that is only HTML, CSS, and JavaScript. It is for a friend\'s restaurant idea and is still not fully completed. ',
     }
 ]
