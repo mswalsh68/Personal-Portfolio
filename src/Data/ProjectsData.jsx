@@ -5,6 +5,7 @@ import Bridgeport from '../assets/bridgeport.png'
 import BB from '../assets/b&b.png'
 import DSC from '../assets/dogcart1.png'
 import ChromeExt from '../assets/chrome_ext.png'
+import windowsForm from '../assets/WindowsFormCS.png'
 
 
 export default[
@@ -28,6 +29,13 @@ export default[
         coverImg:  ChromeExt,
         website: null,
         description: 'This is a Chrome browser extension used like a favorites bar. It is made with vanilla JavaScript. I can save tabs as well as input my own links to save. Currently, this is only a local extension',
+    },
+    {
+        id: 8,
+        title: ".Net Windows Form App",
+        coverImg:  windowsForm,
+        website: null,
+        description: 'It is a .Net Windows form app with C#. You can see the code on my GitHub which can be found on my resume',
     },
     {
         id: 4,
