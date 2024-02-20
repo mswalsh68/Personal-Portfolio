@@ -6,6 +6,7 @@ import BB from '../assets/b&b.png'
 import DSC from '../assets/dogcart1.png'
 import ChromeExt from '../assets/chrome_ext.png'
 import windowsForm from '../assets/WindowsFormCS.png'
+import inventoryForm from '../assets/InventoryCS.png'
 
 
 export default[
@@ -35,7 +36,14 @@ export default[
         title: ".Net Windows Form App",
         coverImg:  windowsForm,
         website: null,
-        description: 'It is a .Net Windows form app with C#. You can see the code on my GitHub which can be found on my resume',
+        description: 'It is a .Net Windows form app made for taking notes with C#. Currently, this is only a front end application, there is no backend database as of yet. You can see the code on my GitHub which can be found on my resume',
+    },
+    {
+        id: 9,
+        title: ".Net Inventory Manager App",
+        coverImg:  inventoryForm,
+        website: null,
+        description: 'It is a .Net Windows form app made for Inventory Management with C#. Currently, this is only a front end application, there is no backend database as of yet. You can see the code on my GitHub which can be found on my resume',
     },
     {
         id: 4,
