@@ -1,12 +1,13 @@
 import TCF1 from '../assets/TCF1.png'
 import TCF from '../assets/TCF.png'
-import Cheesecakes from '../assets/Cheesecakes.png'
+import Cheesecakes from '../assets/Cheesecakes-valentines-day.png'
 import Bridgeport from '../assets/bridgeport.png'
 import BB from '../assets/b&b.png'
 import DSC from '../assets/dogcart1.png'
 import ChromeExt from '../assets/chrome_ext.png'
 import windowsForm from '../assets/WindowsFormCS.png'
 import inventoryForm from '../assets/InventoryCS.png'
+import Ranking from '../assets/Ranking.png'
 
 
 export default[
@@ -16,6 +17,13 @@ export default[
         coverImg:  TCF1,
         website: 'https://theconnectivityfirm.com/',
         description: "TCF is my father's company. This is the live site up right now. It was created with HTML, CSS, Bootstrap, and JavaScript",
+    },
+    {
+        id: 5,
+        title: "Cheesecakes by Dre",
+        coverImg:  Cheesecakes,
+        website: 'https://cheesecake-react-project-mike-walsh.netlify.app/',
+        description: 'This is a full stack React site that has been created for my friend\'s Cheesecake company. There is a fully functioning shopping cart. The only thing missing is a payment processing to actually submit the order',
     },
     {
         id: 2,
@@ -46,18 +54,19 @@ export default[
         description: 'It is a .Net Windows form app made for Inventory Management with C#. Currently, this is only a front end application, there is no backend database as of yet. You can see the code on my GitHub which can be found on my resume',
     },
     {
+        id: 10,
+        title: "ASP.Net with React Movies and Music Ranking App",
+        coverImg:  Ranking,
+        website: 'https://rankingappdotnetreactserver20240318104838.azurewebsites.net/RankMovies',
+        description: 'This is a full stack application with an ASP.Net backend and a React JS frontend',
+
+    },
+    {
         id: 4,
         title: "The Connectivity Firm",
         coverImg:  TCF,
         website: 'https://tcf-react-project.netlify.app/',
         description: 'This is a test site of the TCF site, created with React',
-    },
-    {
-        id: 5,
-        title: "Cheesecakes by Dre",
-        coverImg:  Cheesecakes,
-        website: 'https://cheesecake-react-project-mike-walsh.netlify.app/',
-        description: 'This is a work in progress site that has been created for my friend\'s Cheesecake company',
     },
     {
         id: 6,
