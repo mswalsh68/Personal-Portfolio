@@ -1,4 +1,3 @@
-import TCF1 from '../assets/TCF1.png'
 import TCF from '../assets/TCF.png'
 import Cheesecakes from '../assets/Cheesecakes-valentines-day.png'
 import Bridgeport from '../assets/bridgeport.png'
@@ -14,16 +13,16 @@ export default[
     {
         id: 1,
         title: "The Connectivity Firm",
-        coverImg:  TCF1,
+        coverImg:  TCF,
         website: 'https://theconnectivityfirm.com/',
-        description: "TCF is my father's company. This is the live site up right now. It was created with HTML, CSS, Bootstrap, and JavaScript",
+        description: "TCF is my father's company. This is the live site up right now. It was created with ReactJS. Bootstrap is used for the Navigation menu",
     },
     {
         id: 5,
         title: "Cheesecakes by Dre",
         coverImg:  Cheesecakes,
         website: 'https://cheesecake-react-project-mike-walsh.netlify.app/',
-        description: 'This is a full stack React site that has been created for my friend\'s Cheesecake company. There is a fully functioning shopping cart. The only thing missing is a payment processing to actually submit the order',
+        description: 'This is an eCommerce React site that has been created for my friend\'s Cheesecake company. There is a fully functioning shopping cart. The only thing missing is a payment processing to actually submit the order',
     },
     {
         id: 2,
@@ -60,13 +59,6 @@ export default[
         website: 'https://rankingappdotnetreactserver20240318104838.azurewebsites.net/RankMovies',
         description: 'This is a full stack application with an ASP.Net backend and a React JS frontend',
 
-    },
-    {
-        id: 4,
-        title: "The Connectivity Firm",
-        coverImg:  TCF,
-        website: 'https://tcf-react-project.netlify.app/',
-        description: 'This is a test site of the TCF site, created with React',
     },
     {
         id: 6,
