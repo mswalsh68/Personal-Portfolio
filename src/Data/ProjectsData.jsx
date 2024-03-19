@@ -7,7 +7,7 @@ import ChromeExt from '../assets/chrome_ext.png'
 import windowsForm from '../assets/WindowsFormCS.png'
 import inventoryForm from '../assets/InventoryCS.png'
 import Ranking from '../assets/Ranking.png'
-import NotesApp from '../assets/notesapp.png'
+import NotesApp from '../assets/NotesApp.png'
 
 
 export default[
