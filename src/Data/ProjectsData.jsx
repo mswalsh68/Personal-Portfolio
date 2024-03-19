@@ -56,8 +56,8 @@ export default[
         id: 10,
         title: "ASP.Net with React Movies and Music Ranking App",
         coverImg:  Ranking,
-        website: 'https://rankingappdotnetreactserver20240318104838.azurewebsites.net/RankMovies',
-        description: 'This is a full stack application with an ASP.Net backend and a React JS frontend',
+        website: 'https://github.com/mswalsh68/RankingAppDotNetReact',
+        description: 'This is a full stack application with an ASP.Net backend and a React JS frontend. There is only a link to GitHub repository due to hosting costs',
 
     },
     {
