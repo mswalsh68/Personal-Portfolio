@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className='main-body'>
       <h1>
-        Welcome to my portfolio home page.
+        Welcome to my portfolio home page!
       </h1>
       <p>
         Here, you will find out about who I am.

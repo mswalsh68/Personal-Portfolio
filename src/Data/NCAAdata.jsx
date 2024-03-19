@@ -33,7 +33,7 @@ export default function NCAAdata() {
                 <>
 
                 <h1><img src={NCAAlogo} height="200px"/> {weeks.season.displayName} {weeks.season.type.name}</h1>
-                hi
+                
                 
                 </>
               )
