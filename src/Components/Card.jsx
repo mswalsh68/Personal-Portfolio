@@ -1,16 +1,18 @@
-import React from "react"
 import '../styles.css'
+import { Link } from "react-router-dom"
 
 
-export default function Card(props) {
+export default function Card({website, title, coverImg, description, github }) {
   return (
 
     <div className="card">
-        <a href={props.item.website} target="blank">
-            <p><b>{props.item.title}</b></p>
-            <img className="cardImg" src={props.item.coverImg} />
+        <a href={website} target="blank">
+            <p><b>{title}</b></p>
+            <img className="cardImg" src={coverImg} />
             </a>
-            <p><b>{props.item.description}</b></p>
+            <p><b>{description}</b></p>
+            <Link to={github} target='_blank'>GitHub Link</ Link>
+
     </div>
   )
 }

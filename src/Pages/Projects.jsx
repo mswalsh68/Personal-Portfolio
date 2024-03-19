@@ -9,6 +9,11 @@ export default function Projects() {
     return <Card 
     key={item.key}
     item={item}
+    website={item.website}
+    title={item.title}
+    coverImg={item.coverImg}
+    description={item.description}
+    github={item.github}
     />
   })
 

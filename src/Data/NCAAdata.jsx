@@ -32,7 +32,8 @@ export default function NCAAdata() {
               return(
                 <>
 
-                <h1><img src={NCAAlogo} height="200px"/> {weeks.season.type.name}</h1>
+                <h1><img src={NCAAlogo} height="200px"/> {weeks.season.displayName} {weeks.season.type.name}</h1>
+                
                 
                 </>
               )
@@ -47,12 +48,12 @@ export default function NCAAdata() {
                       <div className="scoreboard" key={games.competitions[0].competitors[1].team.displayName}>
                         
                         <p className='at'>
-                        <b>{games.competitions[0].notes[0].headline}</b> <br />
+                        {/* <b>{games.competitions[0].notes[0].headline}</b> <br /> */}
                           {games.status.type.detail}
                           
                         </p>
 
-                        <div className="scores away">
+                        <div className="scores away" >
                           <img src={games.competitions[0].competitors[1].team.logo}/><br />
                           {games.competitions[0].competitors[1].curatedRank.current < '26' &&  games.competitions[0].competitors[1].curatedRank.current} {games.competitions[0].competitors[1].team.displayName}<br />
                           {games.competitions[0].competitors[1].score}
@@ -61,7 +62,7 @@ export default function NCAAdata() {
                         <div className="scores at">
                           {games.competitions[0].venue.fullName} <br />
                           {games.competitions[0].venue.address.city}, {games.competitions[0].venue.address.state} <br />
-                          TV : {games.competitions[0].broadcasts[0].names[0]}
+                          {/* TV : {games.competitions[0].broadcasts[0].names[0]} */}
                         </div>
                         
                         <div className="scores home">
