@@ -48,7 +48,6 @@ export default function NCAAdata() {
                       <div className="scoreboard" key={games.competitions[0].competitors[1].team.displayName}>
                         
                         <p className='at'>
-                        {/* <b>{games.competitions[0].notes[0].headline}</b> <br /> */}
                           {games.status.type.detail}
                           
                         </p>
@@ -62,7 +61,6 @@ export default function NCAAdata() {
                         <div className="scores at">
                           {games.competitions[0].venue.fullName} <br />
                           {games.competitions[0].venue.address.city}, {games.competitions[0].venue.address.state} <br />
-                          {/* TV : {games.competitions[0].broadcasts[0].names[0]} */}
                         </div>
                         
                         <div className="scores home">
