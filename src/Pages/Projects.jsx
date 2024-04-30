@@ -1,6 +1,9 @@
 import '../styles.css'
 import Card from '../Components/Card'
 import ProjectsData from '../Data/ProjectsData'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+
 
 
 export default function Projects() {
@@ -18,9 +21,17 @@ export default function Projects() {
   })
 
   return (
+
+    <motion.div initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: .5 }}
+    >
+
+
     <div className='main-body'>
       <h2>Projects Page</h2>
-      <p>Click <a target='blank' href="https://github.com/mswalsh68"> HERE </a> to my Github account
+      <p>Click <Link target='blank' href="https://github.com/mswalsh68"> HERE </Link> to my Github account
       </p>
 
       <div className="wrapper">
@@ -29,5 +40,7 @@ export default function Projects() {
 
 
     </div>
+    
+    </motion.div>
   )
 }

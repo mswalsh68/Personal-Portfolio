@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom'
 import Pic1 from '../assets/62043_1472598410706_529663_n.jpg'
 import Pic2 from '../assets/94259057_10158030239975210_413679872582352896_n.jpg'
 import Pic3 from '../assets/IMG_4500.jpg'
+import { motion } from 'framer-motion'
+
 
 
 export default function Home() {
   return (
+
+    <motion.div initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: .5 }}
+    >
+
     <div className='main-body'>
       <h1>
         Welcome to my portfolio home page!
@@ -32,5 +41,7 @@ export default function Home() {
       
 
     </div>
+    
+    </motion.div>
   )
 }
