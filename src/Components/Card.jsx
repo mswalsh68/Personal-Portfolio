@@ -6,11 +6,11 @@ export default function Card({website, title, coverImg, description, github }) {
   return (
 
     <div className="card">
-        <p><b>{title}</b></p>
-            <Link href={website} target="_blank">
-                <img className="cardImg blur" src={coverImg} />
-            </Link>
-            <p className='content fade'><b>{description}</b></p>
+        <a href={website} target="blank">
+            <p><b>{title}</b></p>
+            <img className="cardImg" src={coverImg} />
+            </a>
+            <p><b>{description}</b></p>
             <Link to={github} target='_blank'>GitHub Link</ Link>
 
     </div>

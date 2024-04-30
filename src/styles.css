@@ -159,42 +159,6 @@ body{
   object-fit: contain;
 }
 
-.card > .content{
-  position: absolute;
-  inset: 0;
-  font-size: 1rem;
-  background-color: black;
-  display: grid;
-  place-content: center;
-  font-weight: bolder;
-  border-radius: 10px;
-  height: 100%;
-}
-
-.card > img,
-.card > .content{
-  transition: 200ms ease-in-out;
-}
-
-.card > .content.fade{
-  opacity: 0;
-}
-
-.card:hover > .content.fade{
-  opacity: 1;
-}
-
-
-.card:hover > img.blur{
-  filter:blur(5px);
-}
-
-.content{
-  color: #e0bc39;
-  place-self: center;
-  text-align: center;
-}
-
 .footer{
   display: flex;
   flex-wrap: wrap;
