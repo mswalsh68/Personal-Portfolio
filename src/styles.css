@@ -28,7 +28,8 @@ body{
 .navbar a:focus {
   background: black;
   color: white;
-  font-weight: 500;
+  font-weight: 0;
+  border-radius: 50%;
 }
 
 .nav-item{
