@@ -1,36 +1,22 @@
 import React from 'react';
 import '../styles.css'
+import useFetch from '../Hooks/useFetch';
 
 export default function NFLdata() {
   
-  const [game, setGame] = React.useState([]);
-  const [week, setWeek] = React.useState([]);
-  
-  React.useEffect(() => {
-    fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?')
-      .then(response => response.json())
-      .then(teamaData => {
-
-        // set game
-        setGame(teamaData.events);
-        // console.log(teamaData);
-
-        // set week
-        setWeek(teamaData.leagues);
-        // console.log(teamaData.leagues);
-
-      })
-      .catch(error => console.error(error));
-  }, []);
 
 
 
+  const {game, week, isPending} = useFetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?');
 
 
 
 
   return (
     <div className='main-body'>
+
+
+            {isPending && <div>Loading... </div>}
 
             {week.map((weeks =>{
               return(

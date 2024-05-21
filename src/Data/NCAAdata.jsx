@@ -1,32 +1,19 @@
 import React from 'react';
 import '../styles.css'
 import NCAAlogo from '../assets/NCAA_logo.svg.png'
+import useFetch from '../Hooks/useFetch';
 
 export default function NCAAdata() {
   
-  const [game, setGame] = React.useState([]);
-  const [week, setWeek] = React.useState([]);
-
   
-  React.useEffect(() => {
-    fetch('https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard')
-      .then(response => response.json())
-      .then(teamaData => {
 
-        // set game
-        setGame(teamaData.events);
-        console.log(teamaData.events);
-
-        // set week
-        setWeek(teamaData.leagues);
-        console.log(teamaData.leagues);
- 
-      })
-      .catch(error => console.error(error));
-  }, []);
+  const {game, week, isPending} = useFetch('https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard');
 
   return (
     <div className='main-body'>
+
+
+            {isPending && <div>Loading... </div>}
             
             {week.map((weeks =>{
               return(
