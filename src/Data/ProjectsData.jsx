@@ -1,5 +1,5 @@
 import TCF from '../assets/TCF.png'
-import Cheesecakes from '../assets/Cheesecakes-valentines-day.png'
+import Cheesecakes from '../assets/Cheesecakes.png'
 import Bridgeport from '../assets/bridgeport.png'
 import BB from '../assets/b&b.png'
 import DSC from '../assets/dogcart1.png'
