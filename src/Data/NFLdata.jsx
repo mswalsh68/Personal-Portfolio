@@ -13,11 +13,11 @@ export default function NFLdata() {
 
         // set game
         setGame(teamaData.events);
-        console.log(teamaData);
+        // console.log(teamaData);
 
         // set week
         setWeek(teamaData.leagues);
-        console.log(teamaData.leagues);
+        // console.log(teamaData.leagues);
 
       })
       .catch(error => console.error(error));
@@ -52,7 +52,7 @@ export default function NFLdata() {
                   <div className="scoreboard" key={games.shortName}>
                     
                         <p className='at'>
-                          {/* <b>{games.competitions[0].notes[0].headline}</b> <br /> */}
+                          {/* <b>{games.competitions[0].notes[0].headline}</b>*/} <br /> 
                           {games.status.type.detail} 
                           
                         </p>
