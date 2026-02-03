@@ -1,5 +1,5 @@
 import '../styles.css'
-import resume2026 from '../assets/Mike Walsh Resume 2026.pdf'
+import resume2026 from '../assets/Mike Walsh 2026.pdf'
 import Csharp from '../assets/Mike Walsh Foundational CSharp Microsoft Certification.png'
 import { motion } from 'framer-motion'
 
