@@ -24,7 +24,7 @@ export default[
         title: "Cheesecakes by Dre",
         coverImg:  Cheesecakes,
         website: 'https://cheesecakesbydre.netlify.app/',
-        description: 'This is an eCommerce React site that has been created for my friend\'s Cheesecake company. Currently, the order form is just a contact form, and there is no actual payment processing method set up yet.',
+        description: 'This is an eCommerce React site that has been created for my friend\'s Cheesecake company. Currently, this is just a front-end site, for display purposes only.',
         github: 'https://github.com/mswalsh68/cbd-react-new',
     }
 ]
