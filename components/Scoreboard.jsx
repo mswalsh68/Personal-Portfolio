@@ -17,10 +17,10 @@ function Competitor({ competitor, showRank, align }) {
           alt={team.displayName ?? 'team'}
           width={40}
           height={40}
-          className="h-10 w-10 object-contain"
+          className="h-10 w-10 flex-shrink-0 object-contain"
         />
       )}
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-medium text-ink">
           {ranked && <span className="mr-1 text-accent">#{rank}</span>}
           {team.displayName ?? 'TBD'}
@@ -44,7 +44,7 @@ function GameCard({ event, showRank, showBroadcast }) {
   const detail = event.status?.type?.detail ?? '';
 
   return (
-    <div className="rounded-xl border border-border bg-surface p-5">
+    <div className="overflow-hidden rounded-xl border border-border bg-surface p-5">
       <p className="mb-4 text-center font-mono text-xs uppercase tracking-wide text-muted">
         {detail}
       </p>
@@ -79,7 +79,7 @@ export default function Scoreboard({ title, leagueLogo, seasonLabel, events, sho
     <div className="container-page py-16">
       <header className="mb-10 flex items-center gap-4">
         {leagueLogo && (
-          <img src={leagueLogo} alt={title} width={56} height={56} className="h-14 w-14 object-contain" />
+          <img src={leagueLogo} alt={title} width={56} height={56} className="h-14 w-14 flex-shrink-0 object-contain" />
         )}
         <div>
           <h1 className="text-3xl sm:text-4xl">{title}</h1>
