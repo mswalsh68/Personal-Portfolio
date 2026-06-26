@@ -20,23 +20,23 @@ const siteUrl = 'https://mikewalsh.dev';
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Mike Walsh — Full-Stack Developer',
+    default: 'Mike Walsh — Product Manager',
     template: '%s · Mike Walsh',
   },
   description:
-    'Portfolio of Mike Walsh — full-stack developer. Projects, resume, live sports scoreboards, and a way to get in touch.',
+    'Portfolio of Mike Walsh — product manager who builds his own products with Next.js. Projects, resume, live sports scoreboards, and a way to get in touch.',
   openGraph: {
-    title: 'Mike Walsh — Full-Stack Developer',
+    title: 'Mike Walsh — Product Manager',
     description:
-      'Projects, resume, live sports scoreboards, and a way to get in touch.',
+      'Product manager who builds his own products with Next.js. Projects, resume, live demos, and a way to get in touch.',
     url: siteUrl,
     siteName: 'Mike Walsh',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mike Walsh — Full-Stack Developer',
-    description: 'Full-stack developer portfolio.',
+    title: 'Mike Walsh — Product Manager',
+    description: 'Product manager who builds his own products with Next.js.',
   },
 };
 

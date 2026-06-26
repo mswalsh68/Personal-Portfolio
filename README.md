@@ -1,6 +1,6 @@
 # Mike Walsh — Portfolio
 
-A full-stack developer portfolio built with **Next.js (App Router)** and **Tailwind CSS**.
+Personal portfolio of Mike Walsh — a product manager who builds his own products. Built with **Next.js (App Router)** and **Tailwind CSS**.
 
 🔗 **Live:** _add your Vercel URL here_
 
