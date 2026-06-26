@@ -23,7 +23,7 @@ function Competitor({ competitor, showRank, align }) {
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-medium text-ink">
           {ranked && <span className="mr-1 text-accent">#{rank}</span>}
-          {team.displayName ?? 'TBD'}
+          {team.shortDisplayName ?? team.name ?? team.displayName ?? 'TBD'}
         </p>
         <p className="font-mono text-xl font-semibold text-white">
           {competitor?.score ?? '–'}
