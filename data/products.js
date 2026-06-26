@@ -1,6 +1,7 @@
 export const featuredProduct = {
   id: 1,
   title: 'LegacyLink',
+  screenshot: '/images/legacylink.png',
   tagline: 'The Athletic CRM Platform',
   quote: 'Where Rosters Become Legacies',
   website: 'https://legacylinkhq.app',
