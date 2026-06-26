@@ -24,10 +24,10 @@ export default function Home() {
 
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
-            href="/projects"
+            href="/products"
             className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-accent-hover"
           >
-            View projects
+            View products
           </Link>
           <Link
             href="/contact"

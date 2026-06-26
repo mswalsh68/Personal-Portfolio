@@ -6,9 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const links = [
-  { href: '/projects', label: 'Projects' },
-  { href: '/nfl', label: 'NFL' },
-  { href: '/ncaa', label: 'NCAA' },
+  { href: '/products', label: 'Products' },
   { href: '/resume', label: 'Resume' },
   { href: '/contact', label: 'Contact' },
 ];
