@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Card from '@/components/Card';
 import { featuredProduct, otherProducts } from '@/data/products';
 
@@ -9,8 +10,20 @@ export const metadata = {
 
 function FeaturedProduct({ product }) {
   return (
-    <article className="rounded-xl border border-accent/30 bg-surface p-8 sm:p-10">
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-16">
+    <article className="overflow-hidden rounded-xl border border-accent/30 bg-surface">
+      {product.screenshot && (
+        <div className="relative aspect-[16/9] w-full border-b border-border">
+          <Image
+            src={product.screenshot}
+            alt={`${product.title} dashboard`}
+            fill
+            sizes="(max-width: 1100px) 100vw, 1100px"
+            className="object-cover object-top"
+            priority
+          />
+        </div>
+      )}
+      <div className="flex flex-col gap-8 p-8 sm:p-10 lg:flex-row lg:items-start lg:gap-16">
 
         {/* Left — identity + description */}
         <div className="flex-1">
