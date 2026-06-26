@@ -15,7 +15,6 @@ export default async function NCAAPage() {
 
   return (
     <Scoreboard
-      title="NCAA Scoreboard"
       leagueLogo={leagueLogo}
       seasonLabel={seasonLabel}
       events={events}
