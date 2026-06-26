@@ -13,12 +13,13 @@ export default function Home() {
       <section className="max-w-3xl">
         <p className="font-mono text-sm text-accent">Hi, I&apos;m Mike Walsh</p>
         <h1 className="mt-4 text-4xl leading-tight sm:text-5xl">
-          Full-stack developer building clean, modern web apps.
+          Product manager who builds his own products.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-muted">
-          I build with React, Next.js, and C#. This site is a living portfolio —
-          projects I&apos;ve shipped, my resume, and a few live demos like
-          server-rendered NFL and NCAA scoreboards pulled straight from the ESPN API.
+          I lead products professionally — and build my own with React and Next.js.
+          This site is a living portfolio: projects I&apos;ve shipped, my resume, and a
+          few live demos like server-rendered NFL and NCAA scoreboards pulled straight
+          from the ESPN API.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
