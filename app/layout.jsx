@@ -15,7 +15,7 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
-const siteUrl = 'https://mikewalsh.dev';
+const siteUrl = 'https://personal-portfolio-gamma-peach.vercel.app';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
