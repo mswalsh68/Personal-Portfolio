@@ -22,14 +22,14 @@ export default function Navigation() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="flex items-center gap-3 font-mono text-sm"
+          className="flex items-center gap-2 font-mono text-xs sm:gap-3 sm:text-sm"
         >
           <Image
             src="/images/me.jpg"
             alt="Mike Walsh"
-            width={36}
-            height={36}
-            className="rounded-full ring-1 ring-border"
+            width={32}
+            height={32}
+            className="rounded-full ring-1 ring-border sm:h-9 sm:w-9"
             priority
           />
           <span className="text-white">
@@ -47,10 +47,8 @@ export default function Navigation() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`rounded-md px-3 py-2 text-sm transition-colors ${
-                    active
-                      ? 'text-accent'
-                      : 'text-muted hover:text-ink'
+                  className={`rounded-md px-4 py-2.5 text-sm transition-colors ${
+                    active ? 'text-accent' : 'text-muted hover:text-ink'
                   }`}
                 >
                   {link.label}
@@ -66,25 +64,13 @@ export default function Navigation() {
           aria-label="Toggle navigation"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-ink hover:bg-surface-2 md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-ink hover:bg-surface-2 md:hidden"
         >
           <span className="sr-only">Menu</span>
           <div className="space-y-1.5">
-            <span
-              className={`block h-0.5 w-6 bg-current transition-transform ${
-                open ? 'translate-y-2 rotate-45' : ''
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-current transition-opacity ${
-                open ? 'opacity-0' : ''
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-current transition-transform ${
-                open ? '-translate-y-2 -rotate-45' : ''
-              }`}
-            />
+            <span className={`block h-0.5 w-6 bg-current transition-transform ${open ? 'translate-y-2 rotate-45' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-current transition-opacity ${open ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 w-6 bg-current transition-transform ${open ? '-translate-y-2 -rotate-45' : ''}`} />
           </div>
         </button>
       </nav>
@@ -101,7 +87,7 @@ export default function Navigation() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`block rounded-md px-3 py-2 text-sm ${
+                  className={`block rounded-md px-4 py-3 text-base ${
                     active ? 'text-accent' : 'text-muted hover:bg-surface-2 hover:text-ink'
                   }`}
                 >

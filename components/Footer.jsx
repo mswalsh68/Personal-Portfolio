@@ -10,11 +10,11 @@ const links = [
 export default function Footer() {
   return (
     <footer className="mt-20 border-t border-border">
-      <div className="container-page flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
+      <div className="container-page flex flex-col items-center justify-between gap-4 py-6 sm:flex-row sm:py-8">
         <p className="font-mono text-sm text-muted">
           Built by Mike Walsh · {new Date().getFullYear()}
         </p>
-        <nav className="flex gap-5">
+        <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:gap-5">
           {links.map((link) => (
             <Link
               key={link.href}
