@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    background-image:
+      radial-gradient(60rem 60rem at 100% -10%, rgba(52, 211, 153, 0.06), transparent),
+      radial-gradient(50rem 50rem at -10% 110%, rgba(52, 211, 153, 0.04), transparent);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3 {
+    @apply font-semibold tracking-tight text-white;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .link-accent {
+    @apply text-accent hover:text-accent-hover underline-offset-4 hover:underline;
+  }
+}
