@@ -15,8 +15,8 @@ export default function ScoreboardLayout({ children }) {
     <div>
       <div className="border-b border-border">
         <div className="container-page">
-          <div className="flex items-end justify-between pb-0 pt-10">
-            <h1 className="text-3xl font-semibold text-white sm:text-4xl">
+          <div className="flex items-end justify-between pb-0 pt-8 sm:pt-10">
+            <h1 className="text-2xl font-semibold text-white sm:text-3xl lg:text-4xl">
               Scoreboard
             </h1>
           </div>
@@ -27,7 +27,7 @@ export default function ScoreboardLayout({ children }) {
                 <Link
                   key={tab.href}
                   href={tab.href}
-                  className={`-mb-px border-b-2 px-4 pb-3 text-sm font-medium transition-colors ${
+                  className={`-mb-px border-b-2 px-5 pb-3 pt-1 text-sm font-medium transition-colors ${
                     active
                       ? 'border-accent text-accent'
                       : 'border-transparent text-muted hover:text-ink'

@@ -19,7 +19,7 @@ export default function Card({ title, coverImg, description, website, github, ta
       </a>
 
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <h3 className="text-lg">{title}</h3>
+        <h3 className="text-base sm:text-lg">{title}</h3>
         <p className="flex-1 text-sm leading-relaxed text-muted">{description}</p>
 
         {tags.length > 0 && (
@@ -35,7 +35,7 @@ export default function Card({ title, coverImg, description, website, github, ta
           </ul>
         )}
 
-        <div className="flex gap-4 pt-1">
+        <div className="flex flex-wrap gap-3 pt-1 sm:gap-4">
           <a
             href={website}
             target="_blank"
