@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 
 const links = [
   { href: '/products', label: 'Products' },
+  { href: '/scoreboard/nfl', label: 'Scoreboard' },
   { href: '/resume', label: 'Resume' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -39,7 +40,9 @@ export default function Navigation() {
         {/* Desktop links */}
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((link) => {
-            const active = pathname === link.href;
+            const active = link.href === '/scoreboard/nfl'
+              ? pathname.startsWith('/scoreboard')
+              : pathname === link.href;
             return (
               <li key={link.href}>
                 <Link
@@ -90,7 +93,9 @@ export default function Navigation() {
       {open && (
         <ul className="container-page flex flex-col gap-1 border-t border-border py-3 md:hidden">
           {links.map((link) => {
-            const active = pathname === link.href;
+            const active = link.href === '/scoreboard/nfl'
+              ? pathname.startsWith('/scoreboard')
+              : pathname === link.href;
             return (
               <li key={link.href}>
                 <Link

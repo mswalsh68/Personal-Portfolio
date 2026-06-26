@@ -11,7 +11,6 @@ export default async function NFLPage() {
 
   return (
     <Scoreboard
-      title="NFL Scoreboard"
       leagueLogo={leagueLogo}
       seasonLabel={season?.type?.name}
       events={events}

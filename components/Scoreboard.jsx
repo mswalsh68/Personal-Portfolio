@@ -74,18 +74,17 @@ function GameCard({ event, showRank, showBroadcast }) {
   );
 }
 
-export default function Scoreboard({ title, leagueLogo, seasonLabel, events, showRank, showBroadcast }) {
+export default function Scoreboard({ leagueLogo, seasonLabel, events, showRank, showBroadcast }) {
   return (
-    <div className="container-page py-16">
-      <header className="mb-10 flex items-center gap-4">
-        {leagueLogo && (
-          <img src={leagueLogo} alt={title} width={56} height={56} className="h-14 w-14 flex-shrink-0 object-contain" />
-        )}
-        <div>
-          <h1 className="text-3xl sm:text-4xl">{title}</h1>
-          {seasonLabel && <p className="mt-1 text-muted">{seasonLabel}</p>}
+    <div className="container-page py-10">
+      {(leagueLogo || seasonLabel) && (
+        <div className="mb-8 flex items-center gap-3">
+          {leagueLogo && (
+            <img src={leagueLogo} alt="" width={40} height={40} className="h-10 w-10 flex-shrink-0 object-contain" />
+          )}
+          {seasonLabel && <p className="text-sm text-muted">{seasonLabel}</p>}
         </div>
-      </header>
+      )}
 
       {events.length === 0 ? (
         <p className="text-muted">No games scheduled right now. Check back during the season.</p>

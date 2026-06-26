@@ -98,13 +98,13 @@ export default function ProductsPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/nfl"
+            href="/scoreboard/nfl"
             className="rounded-md border border-border px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-accent/50 hover:text-accent"
           >
             NFL Scoreboard →
           </Link>
           <Link
-            href="/ncaa"
+            href="/scoreboard/ncaa"
             className="rounded-md border border-border px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:border-accent/50 hover:text-accent"
           >
             NCAA Scoreboard →
