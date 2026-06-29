@@ -22,11 +22,11 @@ export const otherProducts = [
   {
     id: 2,
     title: 'The Connectivity Firm',
-    coverImg: '/images/TCF.png',
+    coverImg: '/images/TCF.jpeg',
     website: 'https://theconnectivityfirm.com/',
     github: 'https://github.com/mswalsh68/TCF-React',
     description:
       "Independent manufacturers' rep firm connecting contractors and integrators with leading low-voltage products — fiber, copper, splicers, and connectors. Built the company website.",
-    tags: ['React', 'Bootstrap'],
+    tags: ['Next.js', 'Tailwind', 'Resend'],
   },
 ];
