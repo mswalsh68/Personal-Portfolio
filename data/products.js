@@ -6,14 +6,14 @@ export const featuredProduct = {
   quote: 'Where Rosters Become Legacies',
   website: 'https://legacylinkhq.app',
   description:
-    'Multi-tenant SaaS platform helping sports programs manage their entire athletic network — active rosters, alumni directories, events, mentorship, and mass email communications. Each program is fully branded and scoped to its own data.',
+    'Every year, athletes graduate, transfer, or age out — and most programs have no system to stay connected. Contact info lives in a coach\'s phone. Alumni updates come through word of mouth. I played D1 football at USF and watched a coaching change wipe out an entire alumni network overnight. Generic CRMs weren\'t built for athletics. Spreadsheets don\'t scale. LegacyLink tracks an athlete from the moment they step on campus and keeps the connection alive long after they stop putting on the uniform.',
   features: [
-    'Active roster & alumni directory',
-    'One-click roster-to-alumni transition',
-    'Program news feed & mass email',
-    'Admin-facilitated mentor program',
-    'Engagement analytics',
-    'White-label custom theming',
+    'Solved the coaching-change problem — institutional memory lives in the platform, not a staff member\'s phone',
+    'Replaced Google Forms and survey links with a real alumni directory that stays current',
+    'Built the donor and mentorship pipeline programs lose when they never maintained alumni relationships',
+    'Multi-tenant architecture — each program is fully scoped and branded, no data bleeds between orgs',
+    'Designed for coaches, not developers — no training required',
+    'White-label theming so every program feels like their own product',
   ],
   tags: ['SaaS', 'Multi-tenant', 'Next.js', 'Athletic CRM', 'Founder'],
 };
