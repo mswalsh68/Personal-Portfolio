@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Script from 'next/script';
 
 const inputClass =
   'w-full rounded-md border border-border bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent';
@@ -42,6 +43,8 @@ export default function ContactForm() {
   const sending = status === 'sending';
 
   return (
+    <>
+    <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       <div className="grid gap-4 sm:grid-cols-2">
         <input className={inputClass} type="text" name="name" placeholder="Name" required />
@@ -55,6 +58,8 @@ export default function ContactForm() {
         placeholder="What would you like to talk about?"
         required
       />
+
+      <div className="cf-turnstile" data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} />
 
       {status === 'error' && (
         <p role="alert" className="text-sm text-red-400">
@@ -70,5 +75,6 @@ export default function ContactForm() {
         {sending ? 'Sending…' : 'Send message'}
       </button>
     </form>
+    </>
   );
 }

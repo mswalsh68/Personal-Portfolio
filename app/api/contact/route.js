@@ -14,6 +14,7 @@ export async function POST(req) {
   const email = (body.email ?? '').trim();
   const phone = (body.phone ?? '').trim();
   const comments = (body.comments ?? '').trim();
+  const turnstileToken = body['cf-turnstile-response'];
 
   if (!name || !email || !comments) {
     return Response.json(
@@ -23,6 +24,16 @@ export async function POST(req) {
   }
   if (!EMAIL_RE.test(email)) {
     return Response.json({ error: 'Please enter a valid email address.' }, { status: 400 });
+  }
+
+  const verify = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ secret: process.env.TURNSTILE_SECRET_KEY, response: turnstileToken }),
+  });
+  const { success } = await verify.json();
+  if (!success) {
+    return Response.json({ error: 'Bot verification failed. Please try again.' }, { status: 400 });
   }
 
   const { RESEND_API_KEY, CONTACT_FROM_EMAIL, CONTACT_TO_EMAIL } = process.env;
