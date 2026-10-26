@@ -7,14 +7,6 @@ export const metadata = {
 };
 
 export default async function NFLPage() {
-  const { season, leagueLogo, events } = await getScoreboard('nfl');
-
-  return (
-    <Scoreboard
-      leagueLogo={leagueLogo}
-      seasonLabel={season?.type?.name}
-      events={events}
-      showBroadcast
-    />
-  );
+  const { season, events } = await getScoreboard('nfl');
+  return <Scoreboard seasonLabel={season?.type?.name} events={events} showBroadcast />;
 }

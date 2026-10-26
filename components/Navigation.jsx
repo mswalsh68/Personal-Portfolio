@@ -1,103 +1,85 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-const links = [
-  { href: '/products', label: 'Products' },
-  { href: '/scoreboard/nfl', label: 'Scoreboard' },
-  { href: '/resume', label: 'Resume' },
-  { href: '/contact', label: 'Contact' },
+const NAV = [
+  { href: '/products', label: 'Products', key: 'products' },
+  { href: '/scoreboard/nfl', label: 'Scoreboard', key: 'scoreboard' },
+  { href: '/resume', label: 'Resume', key: 'resume' },
+  { href: '/contact', label: 'Contact', key: 'contact' },
 ];
 
+function Arrow() {
+  return (
+    <svg aria-hidden="true" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
 export default function Navigation() {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  // Close the mobile menu whenever the route changes
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const activeKey = pathname.startsWith('/scoreboard')
+    ? 'scoreboard'
+    : pathname.startsWith('/products')
+    ? 'products'
+    : pathname.startsWith('/resume')
+    ? 'resume'
+    : pathname.startsWith('/contact')
+    ? 'contact'
+    : null;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur">
-      <nav className="container-page flex h-16 items-center justify-between">
-        <Link
-          href="/"
-          onClick={() => setOpen(false)}
-          className="flex items-center gap-2 font-mono text-xs sm:gap-3 sm:text-sm"
-        >
-          <Image
-            src="/images/me.jpg"
-            alt="Mike Walsh"
-            width={32}
-            height={32}
-            className="rounded-full ring-1 ring-border sm:h-9 sm:w-9"
-            priority
-          />
-          <span className="text-white">
-            mike<span className="text-accent">.</span>walsh
-          </span>
+    <header className="hdr">
+      <div className="wrap hdr-in">
+        <Link aria-label="Mike Walsh — home" className="wordmark" href="/">
+          mike<b>.</b>walsh
         </Link>
+        <nav aria-label="Primary" className="nav">
+          {NAV.map((item) => (
+            <Link key={item.key} href={item.href} className={activeKey === item.key ? 'on' : undefined}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <Link className="btn btn-primary" href="/contact">
+            Get in touch <Arrow />
+          </Link>
+          <button
+            aria-controls="mobile-menu"
+            aria-expanded={open}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            className="burger"
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <svg aria-hidden="true" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M4 8h16M4 16h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-1 md:flex">
-          {links.map((link) => {
-            const active = link.href === '/scoreboard/nfl'
-              ? pathname.startsWith('/scoreboard')
-              : pathname === link.href;
-            return (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`rounded-md px-4 py-2.5 text-sm transition-colors ${
-                    active ? 'text-accent' : 'text-muted hover:text-ink'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          aria-label="Toggle navigation"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-ink hover:bg-surface-2 md:hidden"
-        >
-          <span className="sr-only">Menu</span>
-          <div className="space-y-1.5">
-            <span className={`block h-0.5 w-6 bg-current transition-transform ${open ? 'translate-y-2 rotate-45' : ''}`} />
-            <span className={`block h-0.5 w-6 bg-current transition-opacity ${open ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 w-6 bg-current transition-transform ${open ? '-translate-y-2 -rotate-45' : ''}`} />
-          </div>
-        </button>
-      </nav>
-
-      {/* Mobile menu */}
-      {open && (
-        <ul className="container-page flex flex-col gap-1 border-t border-border py-3 md:hidden">
-          {links.map((link) => {
-            const active = link.href === '/scoreboard/nfl'
-              ? pathname.startsWith('/scoreboard')
-              : pathname === link.href;
-            return (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={`block rounded-md px-4 py-3 text-base ${
-                    active ? 'text-accent' : 'text-muted hover:bg-surface-2 hover:text-ink'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      )}
+      <div className="drawer" hidden={!open} id="mobile-menu">
+        <div className="wrap">
+          <Link href="/">Home</Link>
+          <Link href="/products">Products</Link>
+          <Link href="/scoreboard/nfl">Scoreboard</Link>
+          <Link href="/resume">Resume</Link>
+          <Link href="/contact">Contact</Link>
+          <Link className="btn btn-primary" href="/contact">Get in touch</Link>
+        </div>
+      </div>
     </header>
   );
 }

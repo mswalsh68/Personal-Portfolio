@@ -1,16 +1,28 @@
 import './globals.css';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import './mw.css';
+import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from 'next/font/google';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
-const inter = Inter({
+// Redesign typefaces — mapped to --display / --body / --mono in mw.css
+const display = Bricolage_Grotesque({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['500', '700'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const body = Instrument_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-body',
   display: 'swap',
 });
 
 const mono = JetBrains_Mono({
   subsets: ['latin'],
+  weight: ['400', '500'],
   variable: '--font-mono',
   display: 'swap',
 });
@@ -42,11 +54,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
-      <body className="flex min-h-screen flex-col">
-        <Navigation />
-        <main className="flex-1">{children}</main>
-        <Footer />
+    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+      <body>
+        <div className="mw">
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
