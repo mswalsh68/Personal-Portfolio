@@ -2,7 +2,7 @@ export const featuredProduct = {
   id: 1,
   title: 'LegacyLink',
   screenshot: '/images/legacylink.png',
-  tagline: 'The Athletic CRM Platform',
+  tagline: 'The Athletic Alumni Platform',
   quote: 'Where Rosters Become Legacies',
   website: 'https://legacylinkhq.app',
   description:
@@ -11,11 +11,11 @@ export const featuredProduct = {
     'Solved the coaching-change problem — institutional memory lives in the platform, not a staff member\'s phone',
     'Replaced Google Forms and survey links with a real alumni directory that stays current',
     'Built the donor and mentorship pipeline programs lose when they never maintained alumni relationships',
-    'Multi-tenant architecture — each program is fully scoped and branded, no data bleeds between orgs',
-    'Designed for coaches, not developers — no training required',
-    'White-label theming so every program feels like their own product',
+    'Replaced the mass-BCC — rich-text email campaigns to filtered alumni and player segments, with delivery tracking and send limits that hold across every program on the account',
+    'Gave alumni a reason to come back — a program feed, message boards and events with invitations, instead of a directory that only gets opened when someone needs a favor',
+    'Multi-tenant and white-labeled — each program is fully scoped, branded and themed as their own product, with no data bleeding between orgs',
   ],
-  tags: ['SaaS', 'Multi-tenant', 'Next.js', 'Athletic CRM', 'Founder'],
+  tags: ['SaaS', 'Multi-tenant', 'Next.js', 'Athletic Alumni', 'Founder'],
 };
 
 export const otherProducts = [
