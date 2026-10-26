@@ -7,18 +7,7 @@ export const metadata = {
 };
 
 export default async function NCAAPage() {
-  const { season, leagueLogo, events } = await getScoreboard('ncaa');
-
-  const seasonLabel = [season?.displayName, season?.type?.name]
-    .filter(Boolean)
-    .join(' · ');
-
-  return (
-    <Scoreboard
-      leagueLogo={leagueLogo}
-      seasonLabel={seasonLabel}
-      events={events}
-      showRank
-    />
-  );
+  const { season, events } = await getScoreboard('ncaa');
+  const seasonLabel = [season?.displayName, season?.type?.name].filter(Boolean).join(' · ');
+  return <Scoreboard seasonLabel={seasonLabel} events={events} showRank />;
 }
