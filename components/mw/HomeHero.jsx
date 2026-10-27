@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from '@/components/mw/icons';
 
@@ -41,17 +40,6 @@ export default function HomeHero() {
           <div className="actions">
             <Link className="btn btn-primary" href="/products">View products <ArrowRight /></Link>
             <Link className="btn btn-ghost" href="/resume">Read my resume</Link>
-          </div>
-        </div>
-        <div className="photo-wrap">
-          <div className="photo-ring">
-            <div className="photo">
-              <Image src="/images/me.jpg" alt="Mike Walsh" fill sizes="(max-width: 1024px) 100vw, 40vw" style={{ objectFit: 'cover' }} priority />
-            </div>
-          </div>
-          <div className="badge">
-            <i />
-            <div><b>Now building LegacyLink</b><small>Live beta with USF Football</small></div>
           </div>
         </div>
       </div>

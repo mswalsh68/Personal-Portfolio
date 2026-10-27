@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 const DATE_FMT = { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/New_York' };
 const TIME_FMT = { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' };
 
@@ -24,7 +25,13 @@ function TeamRow({ competitor, state, showRank }) {
   return (
     <div className={cls}>
       <span className="nm">
-        <span className="ab">{abbr(team)}</span>
+        <span className="ab">
+          {team.logo ? (
+            <img src={team.logo} alt="" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+          ) : (
+            abbr(team)
+          )}
+        </span>
         {ranked && <span style={{ color: 'var(--gold)', marginRight: 4 }}>#{rank}</span>}
         {team.shortDisplayName ?? team.name ?? team.displayName ?? 'TBD'}
       </span>
