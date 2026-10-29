@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from '@/components/mw/icons';
 
@@ -44,9 +43,20 @@ export default function HomeHero() {
           </div>
         </div>
         <div className="photo-wrap">
-          <div className="photo-ring">
-            <div className="photo">
-              <Image src="/images/me.jpg" alt="Mike Walsh" fill sizes="(max-width: 1024px) 100vw, 40vw" style={{ objectFit: 'cover' }} priority />
+          <div style={{ border: '1px solid var(--line-hi)', borderRadius: 20, background: 'var(--surf)', overflow: 'hidden', boxShadow: '0 24px 48px -24px #000' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '14px 16px', borderBottom: '1px solid var(--line)' }}>
+              <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#ff5f57' }} />
+              <span style={{ width: 11, height: 11, borderRadius: '50%', background: '#febc2e' }} />
+              <span style={{ width: 11, height: 11, borderRadius: '50%', background: 'var(--green)' }} />
+              <span style={{ marginLeft: 'auto', fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--dim)' }}>mike.walsh ~ now</span>
+            </div>
+            <div style={{ padding: 24, fontFamily: 'var(--mono)', fontSize: 14, lineHeight: 2, color: 'var(--muted)' }}>
+              <div><span style={{ color: 'var(--green)' }}>$</span> whoami</div>
+              <div style={{ color: 'var(--text)' }}>product_manager · founder · builder</div>
+              <div style={{ marginTop: 14 }}><span style={{ color: 'var(--green)' }}>$</span> stack --daily</div>
+              <div style={{ color: 'var(--text)' }}>Next.js · SQL · Claude Code</div>
+              <div style={{ marginTop: 14 }}><span style={{ color: 'var(--green)' }}>$</span> status</div>
+              <div><span style={{ color: 'var(--gold)' }}>●</span> shipping LegacyLink · beta with USF Football</div>
             </div>
           </div>
           <div className="badge">
