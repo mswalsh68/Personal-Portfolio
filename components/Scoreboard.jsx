@@ -25,9 +25,9 @@ function TeamRow({ competitor, state, showRank }) {
   return (
     <div className={cls}>
       <span className="nm">
-        <span className="ab">
+        <span className="ab" style={team.logo ? { background: '#fff', borderColor: 'transparent' } : undefined}>
           {team.logo ? (
-            <img src={team.logo} alt="" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+            <img src={team.logo} alt="" style={{ width: 30, height: 30, objectFit: 'contain' }} />
           ) : (
             abbr(team)
           )}
