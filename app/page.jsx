@@ -52,7 +52,7 @@ export default function HomePage() {
             <Link className="link" href="/products">All products <ArrowRight /></Link>
           </div>
           <article className="prod-feature reveal">
-            <div className="shot ph-bg" />
+            <div className="shot"><img alt="LegacyLink dashboard" src="/images/legacylink.png" /></div>
             <div className="prod-body">
               <div className="tags"><span className="tag live">● Live</span><span className="tag">Founder</span><span className="tag">SaaS</span><span className="tag">Multi-tenant</span></div>
               <h3>LegacyLink</h3>
