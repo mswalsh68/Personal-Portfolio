@@ -62,7 +62,7 @@ export default function ProductsPage() {
       <section aria-labelledby="tcf-h" className="sec">
         <div className="wrap">
           <article className="prod-feature reveal">
-            <div className="shot"><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" /></div>
+            <div className="shot" style={{ '--shot-ar': '1080/675' }}><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" /></div>
             <div className="prod-body">
               <div className="tags"><span className="tag live">● Live</span><span className="tag">Next.js</span><span className="tag">Tailwind</span><span className="tag">Resend</span></div>
               <h3 id="tcf-h">The Connectivity Firm</h3>

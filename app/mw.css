@@ -80,8 +80,8 @@ body{margin:0;background:#08090D}
 .now-card p{color:var(--muted);font-size:15px}
 
 /* product cards */
-.prod-feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);border:1px solid var(--line-hi);border-radius:28px;overflow:hidden;background:var(--bg2)}
-.prod-feature .shot{min-height:440px}
+.prod-feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;border:1px solid var(--line-hi);border-radius:28px;overflow:hidden;background:var(--bg2)}
+.prod-feature .shot{min-height:0;aspect-ratio:var(--shot-ar,959/732)}
 .prod-body{padding:44px;display:flex;flex-direction:column;gap:18px}
 .prod-body h3{font-size:44px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
@@ -208,7 +208,7 @@ body{margin:0;background:#08090D}
   .fact:nth-child(n+3){border-top:1px solid var(--line)}
   .now,.grid3,.how{grid-template-columns:1fr 1fr}
   .prod-feature{grid-template-columns:1fr}
-  .prod-feature .shot{min-height:320px}
+  .prod-feature .shot{min-height:0}
   .principles{grid-template-columns:1fr 1fr}
   .pr:nth-child(3){padding-left:0;border-left:0}
   .pr:nth-child(n+3){border-top:1px solid var(--line);margin-top:8px}
@@ -239,7 +239,7 @@ body{margin:0;background:#08090D}
   .pr,.pr+.pr{padding:24px 0 8px;border-left:0;border-top:1px solid var(--line)}
   .prod-body{padding:28px}
   .prod-body h3{font-size:34px}
-  .prod-feature .shot{min-height:240px}
+  .prod-feature .shot{min-height:0}
   .phero{padding:56px 0 40px}
   .phero h1{font-size:44px}
   .phero p{font-size:18px}
