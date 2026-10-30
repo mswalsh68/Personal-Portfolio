@@ -22,7 +22,7 @@ export default function ProductsPage() {
       <section aria-labelledby="ll-h" className="sec" style={{ paddingTop: 72 }}>
         <div className="wrap">
           <article className="prod-feature reveal">
-            <div className="shot"><img alt="LegacyLink landing page" src="/images/legacylink.png" style={{ objectPosition: 'center' }} /></div>
+            <div className="shot" style={{ background: '#0a0a0a' }}><img alt="LegacyLink landing page" src="/images/legacylink.png" style={{ objectFit: 'contain' }} /></div>
             <div className="prod-body">
               <div className="tags"><span className="tag live">● Live beta</span><span className="tag">Founder</span><span className="tag">Next.js</span><span className="tag">SQL</span></div>
               <h3 id="ll-h">LegacyLink</h3>
@@ -62,7 +62,7 @@ export default function ProductsPage() {
       <section aria-labelledby="tcf-h" className="sec">
         <div className="wrap">
           <article className="prod-feature reveal">
-            <div className="shot"><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" /></div>
+            <div className="shot" style={{ background: '#030918' }}><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" style={{ objectFit: 'contain' }} /></div>
             <div className="prod-body">
               <div className="tags"><span className="tag live">● Live</span><span className="tag">Next.js</span><span className="tag">Tailwind</span><span className="tag">Resend</span></div>
               <h3 id="tcf-h">The Connectivity Firm</h3>

@@ -52,7 +52,7 @@ export default function HomePage() {
             <Link className="link" href="/products">All products <ArrowRight /></Link>
           </div>
           <article className="prod-feature reveal">
-            <div className="shot"><img alt="LegacyLink landing page" src="/images/legacylink.png" style={{ objectPosition: 'center' }} /></div>
+            <div className="shot" style={{ background: '#0a0a0a' }}><img alt="LegacyLink landing page" src="/images/legacylink.png" style={{ objectFit: 'contain' }} /></div>
             <div className="prod-body">
               <div className="tags"><span className="tag live">● Live</span><span className="tag">Founder</span><span className="tag">SaaS</span><span className="tag">Multi-tenant</span></div>
               <h3>LegacyLink</h3>
@@ -66,7 +66,7 @@ export default function HomePage() {
           </article>
           <div className="grid2 reveal" style={{ marginTop: 20 }}>
             <Link className="card" href="/products">
-              <div className="shot"><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" /></div>
+              <div className="shot" style={{ background: '#030918' }}><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" style={{ objectFit: 'contain' }} /></div>
               <div className="card-body">
                 <div className="tags"><span className="tag live">● Live</span><span className="tag">Next.js</span><span className="tag">Tailwind</span><span className="tag">Resend</span></div>
                 <h3>The Connectivity Firm</h3>
