@@ -52,7 +52,7 @@ export default function HomePage() {
             <Link className="link" href="/products">All products <ArrowRight /></Link>
           </div>
           <article className="prod-feature reveal">
-            <div className="shot"><img alt="LegacyLink dashboard" src="/images/legacylink.png" /></div>
+            <div className="shot" style={{ background: '#0a0a0a' }}><img alt="LegacyLink landing page" src="/images/legacylink.png" style={{ objectFit: 'contain' }} /></div>
             <div className="prod-body">
               <div className="tags"><span className="tag live">● Live</span><span className="tag">Founder</span><span className="tag">SaaS</span><span className="tag">Multi-tenant</span></div>
               <h3>LegacyLink</h3>
@@ -66,7 +66,7 @@ export default function HomePage() {
           </article>
           <div className="grid2 reveal" style={{ marginTop: 20 }}>
             <Link className="card" href="/products">
-              <div className="shot"><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" /></div>
+              <div className="shot" style={{ background: '#030918' }}><img alt="The Connectivity Firm website homepage" src="/images/TCF.jpeg" style={{ objectFit: 'contain' }} /></div>
               <div className="card-body">
                 <div className="tags"><span className="tag live">● Live</span><span className="tag">Next.js</span><span className="tag">Tailwind</span><span className="tag">Resend</span></div>
                 <h3>The Connectivity Firm</h3>
@@ -77,8 +77,8 @@ export default function HomePage() {
             <Link className="card" href="/scoreboard/nfl">
               <div className="shot ph-bg" style={{ padding: 28, alignItems: 'stretch', justifyContent: 'stretch' }}>
                 <div style={{ flex: 1, display: 'grid', gap: 10, alignContent: 'center' }}>
-                  <div className="game" style={{ padding: '14px 18px' }}><div className="team"><span className="nm"><span className="ab">CHI</span>Bears</span><span className="sc">30</span></div><div className="team lose"><span className="nm"><span className="ab">NE</span>Patriots</span><span className="sc">24</span></div></div>
-                  <div className="game" style={{ padding: '14px 18px' }}><div className="team"><span className="nm"><span className="ab">TB</span>Buccaneers</span><span className="sc">43</span></div><div className="team lose"><span className="nm"><span className="ab">CAR</span>Panthers</span><span className="sc">13</span></div></div>
+                  <div className="game" style={{ padding: '14px 18px' }}><div className="team win"><span className="nm"><span className="ab" style={{ background: '#fff', borderColor: 'transparent' }}><img src="https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/chi.png" alt="" style={{ width: 26, height: 26, objectFit: 'contain' }} /></span>Bears</span><span className="sc">30</span></div><div className="team lose"><span className="nm"><span className="ab" style={{ background: '#fff', borderColor: 'transparent' }}><img src="https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ne.png" alt="" style={{ width: 26, height: 26, objectFit: 'contain' }} /></span>Patriots</span><span className="sc">24</span></div></div>
+                  <div className="game" style={{ padding: '14px 18px' }}><div className="team win"><span className="nm"><span className="ab" style={{ background: '#fff', borderColor: 'transparent' }}><img src="https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/tb.png" alt="" style={{ width: 26, height: 26, objectFit: 'contain' }} /></span>Buccaneers</span><span className="sc">43</span></div><div className="team lose"><span className="nm"><span className="ab" style={{ background: '#fff', borderColor: 'transparent' }}><img src="https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/car.png" alt="" style={{ width: 26, height: 26, objectFit: 'contain' }} /></span>Panthers</span><span className="sc">13</span></div></div>
                 </div>
               </div>
               <div className="card-body">
